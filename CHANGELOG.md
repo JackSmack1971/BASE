@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### ✨ New Features
 
 - **10x Product Strategy Skill (v1.1.0)**: Deployed a structured opportunity discovery engine to `.agents/skills/game-changing-features/`.
+- **Adversarial Content Factory (v1.0.0)**: 4-skill article production pipeline deployed to `.agents/skills/`.
+  - Implemented `multi-agent-article-pipeline` orchestrator with deterministic triage.
+  - Implemented `article-research-dialectic` with adversarial Advocate/Skeptic streams.
+  - Implemented `article-qa-auditor` with drafting (@engineer) and audit (@qa) roles.
+  - Implemented `article-red-team` with attacking attack classification engine.
+  - Added deterministic ShellSpec BDD verification suite for all 4 pipeline scripts.
   - Implemented 3-tier opportunity analysis: Massive, Medium, and Small Gems.
   - Added ruthless evaluation matrix and stack-ranked prioritization protocol.
   - Enforced mandatory artifact-only output to `.agents/docs/ai/<area>/10x/session-N.md`.

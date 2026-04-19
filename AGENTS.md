@@ -25,6 +25,10 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 
 Available Skills (load on semantic match only):
 - game-changing-features: 10x Product strategy analysis & opportunity discovery.
+- multi-agent-article-pipeline: Orchestrate the complete adversarial article production suite.
+- article-research-dialectic: Adversarial research for article generation: advocate/skeptic/synthesizer.
+- article-qa-auditor     : Editorial quality gate: drafting (@engineer) and auditing (@qa).
+- article-red-team        : Adversarial challenge and threat classification.
 - ui-ux-pro-max     : Design intelligence, palettes, typography (Phase 0-6).
 - brainstorming     : Design-first exploration, spec generation, hard gates
 - simplification-cascades: Identifies unifying abstractions to collapse complexity
@@ -43,6 +47,7 @@ Available Skills (load on semantic match only):
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
 
 Available Workflows (trigger via /workflow):
+- full-stack-article : Multi-agent orchestration for adversarial article production.
 - plan-complex-task  : Orchestrate multi-phase task bootstrapping and state merging
 - plan-status        : Read-only dashboard for active planning session state
 - full-stack-feature : Multi-agent orchestration for end-to-end feature delivery

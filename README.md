@@ -19,6 +19,7 @@
     - **Operations**: Terraform IaC, Changelog Automation, Git Worktree Isolation
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **10x Product Strategy** (structured opportunity discovery & prioritization)
+- **Adversarial Content Factory** (4-skill article production pipeline: Dialectic Research + Red Team review)
 - **Context Engineering** (automated hierarchy audits and brain-dumps)
 - **UI/UX Pro Max** (161 color palettes, 99 UX guidelines, and 10 tech stacks)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)

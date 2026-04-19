@@ -57,6 +57,15 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **simplification-cascades** | Reducing complexity and redundant implementations. | "Simplify this", "Too complex", "Reduce duplication" |
 | **semantic-versioning** | Automating project versioning and tag management. | "Bump version", "Release v1.2.0", "SemVer" |
 
+## 📝 Content & Research
+
+| Skill | Optimal Use Case | Activation Trigger |
+|---|---|---|
+| **multi-agent-article-pipeline** | Orchestrate the complete adversarial article production suite. | "Generate article", "Write research piece" |
+| **article-research-dialectic** | Adversarial research for article generation: advocate/skeptic/synthesizer. | "Research dialectic", "Find supporting/counter evidence" |
+| **article-qa-auditor** | Editorial quality gate: drafting (@engineer) and auditing (@qa). | "Audit this article", "QA this draft", "Draft from spec" |
+| **article-red-team** | Adversarial challenge: constructs attacking counterarguments to article theses. | "Red team this", "Challenge this thesis", "Steelman" |
+
 ---
 
 ## 📈 Integration Strategy

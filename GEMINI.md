@@ -29,3 +29,17 @@
 - **changelog-generator** (`.agents/skills/changelog-generator/`): MUST BE USED for
   any request involving changelog creation, release note generation, commit summarization,
   or version documentation. Do NOT write changelog content manually before invoking this skill.
+
+- **multi-agent-article-pipeline** (`.agents/skills/multi-agent-article-pipeline/`): MUST BE USED for generating long-form articles requiring multi-step research and adversarial review. Orchestrates the 4-skill production suite.
+
+- **article-research-dialectic** (`.agents/skills/article-research-dialectic/`): MUST BE USED for adversarial research, thesis declaration, and conflict mapping.
+
+- **article-qa-auditor** (`.agents/skills/article-qa-auditor/`): MUST BE USED for article drafting (@engineer) and quality auditing (@qa) with style guide enforcement.
+
+- **article-red-team** (`.agents/skills/article-red-team/`): MUST BE USED for adversarial review and threat classification of article conclusions.
+
+## Knowledge Items
+
+- **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.
+  - Primary Script: `./scripts/pipeline_triage.sh --consolidate`
+  - Target: `.gemini/antigravity/knowledge/pipeline_history.md`
