@@ -1,28 +1,27 @@
-# Walkthrough — GStack Integration: Phase 1
+# Walkthrough — GStack Integration: Phase 2
 
-I have successfully completed Phase 1 of the **GStack Integration**, establishing a mandatory, high-velocity trajectory persistence system within the BASE architecture.
+I have successfully completed Phase 2 of the **GStack Integration**, establishing the aesthetic personalization and quality assurance layers of the BASE architecture.
 
 ## Changes Made
 
-### 1. New Intelligence Stack
-- **[checkpoint-manager Skill](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/checkpoint-manager/SKILL.md)**: Implemented the L3 worker responsible for `context-save` and `context-restore` protocols.
-- **Trajectory Storage**: Established `.agents/checkpoints/` for JSON mental model serialization and a hidden `checkpoint/*` branch for Git WIP patches.
+### 1. Aesthetic Intelligence Stack
+- **[taste-engine Skill](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/taste-engine/SKILL.md)**: Implemented the L3 worker responsible for maintaining the [taste-profile.json](file:///c:/Users/click/Desktop/BASE_PROJECT/.gemini/antigravity/knowledge/taste-profile.json).
+- **[anti-slop-guard Rule](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/rules/anti-slop-guard.md)**: Established the glob-triggered design auditor that performs litmus checks for generic "AI-slop" patterns in UI components.
 
-### 2. Guardrails & Configuration
-- **[_master.md Rule](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/rules/_master.md)**: Updated the universal persona to **REQUIRE** a `context-save` before any destructive write or foundational refactor.
-- **[.antigravity-local.md](file:///c:/Users/click/Desktop/BASE_PROJECT/.antigravity-local.md)**: Configured `checkpoint_mode: continuous` and `checkpoint_frequency: per_major_step` as the new system defaults.
-- **[AGENTS.md](file:///c:/Users/click/Desktop/BASE_PROJECT/AGENTS.md)**: Registered the new skill and updated artifact conventions to reflect the "Trajectory Persistence" mandate.
+### 2. Guardrails & Configuration (Opt-In)
+- **[.antigravity-local.md](file:///c:/Users/click/Desktop/BASE_PROJECT/.antigravity-local.md)**: Registered `enable_taste_engine: false` and `enable_anti_slop_guard: false` as the new system defaults, ensuring these features remain strictly **opt-in**.
+- **[_master.md Rule](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/rules/_master.md)**: Infused the universal persona with "anti-slop aesthetic excellence" as a core development attribute.
+- **[AGENTS.md](file:///c:/Users/click/Desktop/BASE_PROJECT/AGENTS.md)**: Registered the new skill and rule in the Master Routing Index.
 
 ### 3. Verification
-- **Baseline Checkpoint**: Executed a manual `context-save` and committed the resulting mental model to the `checkpoint/initial-sys-state` branch.
-- **Persistence Confirmed**: Verified that all structural changes are live on `main` while trajectory history is safely isolated in its own branch.
+- **Knowledge Schema**: Established the schema-frozen `taste-profile.json` with initial dimensions for fonts, colors, and layout density.
+- **Deployment Status**: All structural changes have been committed and pushed to `main`.
 
 ## Status Dashboard
 [status.md](file:///c:/Users/click/.gemini/antigravity/brain/b0b72fee-c7fa-4ae8-9b7a-86cfbed0ebc1/status.md)
 
 > [!SUCCESS]
-> **Trajectory Safety is now enforced.** The system is now resilient to context loss and trajectory drift, aligning the BASE project with the most advanced GStack development methodologies.
+> **Aesthetic Personalization is now live.** Use `synchronize-taste` to begin training your profile. The `anti-slop-guard` will now automatically audit UI proposals once enabled in your local configuration.
 
 ## Deployment Status
-- **Main Branch**: Structural changes pushed to `origin/main`.
-- **Checkpoint Branch**: Active trajectory history started on `checkpoint/initial-sys-state`.
+- **Main Branch**: Structural changes and Phase 2 assets deployed to `origin/main`.

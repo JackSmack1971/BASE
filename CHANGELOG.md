@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - **Architectural Modernization**: Migrated the core configuration directory from legacy `.agent/` to the modern `.agents/` (plural) standard to support multi-agent orchestration.
 - **Global Path Update**: Updated all internal path references and external documentation (README, AGENTS.md, workflows) to reflect the new `.agents/` convention.
+- **GStack Integration Phase 2**: Deployed the **Taste Engine** (personalization) and **Anti-Slop Guard** (aesthetic QA) as opt-in advanced intelligence layers.
+- **Final Documentation**: Refreshed the root `README.md` to reflect the complete GStack-powered BASE stack.
 
 ## [0.1.1] - 2026-04-19
 
