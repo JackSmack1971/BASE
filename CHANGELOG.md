@@ -5,6 +5,21 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2026-04-19
+
+### ✨ New Features
+
+- **Context Engineering Skill**: Deployed the primary context optimization and hierarchy audit skill to `.agents/skills/context-engineering/`.
+  - Added `audit_context.sh` for multi-layer hierarchy health checks.
+  - Added `generate_brain_dump.sh` for automated session initialization.
+  - Integrated `gemini_md_scaffold.md` for project-level architectural consistency.
+  - Registered skill in `.gemini/GEMINI.md` under the global **Skill Pointers** hub.
+
+### 🔧 Improvements
+
+- **Skill Testing (BDD)**: Authored `context_engineering_spec.sh` validating auditing logic and stack detection with a 100% pass rate.
+- **Global Strategy**: Established the **Skill Pointers** pattern in `GEMINI.md` to ensure reliable tool activation across all sessions.
+
 ## [0.4.0] - 2026-04-19
 
 ### ✨ New Features
