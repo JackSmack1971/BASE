@@ -8,6 +8,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 
 | Skill | Optimal Use Case | Activation Trigger |
 |---|---|---|
+| **game-changing-features** | 10x Product strategy analysis & opportunity discovery. | "What to build next", "10x better", "Product strategy" |
 | **brainstorming** | Design-first exploration of new features or sub-projects. | "Design this", "Let's build X", "I want to add funcionality" |
 | **planning** | Tracking progress on complex, multi-phase tasks. | "Create a plan", "Multi-step project", "Break this down" |
 | **writing-plans** | Generating TDD-ready implementation plans from specs. | "Plan this feature", "Plan before coding", "Turn spec into tasks" |

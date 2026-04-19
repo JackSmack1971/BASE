@@ -24,6 +24,7 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 # It does NOT execute domain logic from this file — it routes to the Skill.
 
 Available Skills (load on semantic match only):
+- game-changing-features: 10x Product strategy analysis & opportunity discovery.
 - ui-ux-pro-max     : Design intelligence, palettes, typography (Phase 0-6).
 - brainstorming     : Design-first exploration, spec generation, hard gates
 - simplification-cascades: Identifies unifying abstractions to collapse complexity
@@ -100,6 +101,12 @@ QA flows, and cloud browser environments.
 All front-end, UI, and UX work in this project MUST use the ui-ux-pro-max skill
 located at .agents/skills/ui-ux-pro-max/. Follow its Phase 0-6 execution protocol.
 Do not generate UI code without first running the design system generation step.
+
+## Product Strategy
+
+When performing 10x product strategy analysis, use the game-changing-features skill
+located at .agents/skills/game-changing-features/. All session artifacts are written
+to .agents/docs/ai/<product-or-area>/10x/. Do not output strategy analysis to chat.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.

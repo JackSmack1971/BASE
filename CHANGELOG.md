@@ -5,6 +5,16 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] - 2026-04-19
+
+### ✨ New Features
+
+- **10x Product Strategy Skill (v1.1.0)**: Deployed a structured opportunity discovery engine to `.agents/skills/game-changing-features/`.
+  - Implemented 3-tier opportunity analysis: Massive, Medium, and Small Gems.
+  - Added ruthless evaluation matrix and stack-ranked prioritization protocol.
+  - Enforced mandatory artifact-only output to `.agents/docs/ai/<area>/10x/session-N.md`.
+  - Added deterministic session management via `init_session.sh` and `verify_artifact.sh`.
+
 ## [0.8.0] - 2026-04-19
 
 ### ✨ New Features
