@@ -24,7 +24,8 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 # It does NOT execute domain logic from this file — it routes to the Skill.
 
 Available Skills (load on semantic match only):
-- checkpoint-manager: Context persistence, mental model serialization (context-save/restore)
+- taste-engine       : Maintain and apply user aesthetic preferences (taste-profile.json)
+- checkpoint-manager : Context persistence, mental model serialization (context-save/restore)
 - db-migration       : PostgreSQL/ORM schema changes, Prisma migrations
 - tdd-enforcer       : Test-first cycles, red-green-refactor enforcement
 - security-audit     : Auth flows, JWT, crypto, penetration staging
@@ -43,6 +44,7 @@ Available Workflows (trigger via /workflow):
 - pr-review          : Automated diff analysis and audit for pull requests
 
 Available Rules (loaded via glob — never manually invoked):
+- anti-slop-guard    : Aesthetic quality checks for UI components (*.tsx, *.css)
 - _master             : Persona + non-negotiable guardrails (alwaysApply:true)
 - code-style          : Activates on *.ts, *.js, *.py
 - migration-guard     : Activates on **/migrations/**, *.migration.ts

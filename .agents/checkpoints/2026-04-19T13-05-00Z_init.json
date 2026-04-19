@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-04-19T13:05:00Z",
+  "checkpoint_id": "init-agents-migration",
+  "mental_model": {
+    "decisions": [
+      "Migrated core directory to .agents/ modern standard",
+      "Adopted mandatory Continuous Checkpoints as foundational guardrail",
+      "Implemented 'Copy then Delete' strategy for folder migration"
+    ],
+    "tried_and_failed": [
+      "Direct 'mv' (bypassed for safer copy transition)",
+      "Targeting brain-copy path for _master.md (corrected to repo path)"
+    ],
+    "remaining_work": [
+      "Phase 2: Taste Engine implementation",
+      "Phase 2: Anti-Slop constraint implementation",
+      "Automated checkpoint triggers in existing workflows"
+    ]
+  },
+  "git_state": {
+    "branch": "checkpoint/initial-sys-state",
+    "wip_commit": "TBD"
+  }
+}
