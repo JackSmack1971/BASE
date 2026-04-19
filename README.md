@@ -1,7 +1,9 @@
 # BASE 🧬
 
 **The official Antigravity starter template** — pre-configured agent skills, strict guardrails, and battle-tested workflows for production-grade full-stack development.
-[](https://antigravity.google) [](https://deepmind.google/technologies/gemini/)[](LICENSE) 
+[Official Antigravity page](https://antigravity.google) 
+[DEEPMIND](https://deepmind.google/technologies/gemini/)
+[](LICENSE) 
 
 --- 
 
