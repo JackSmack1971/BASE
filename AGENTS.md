@@ -24,10 +24,13 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 # It does NOT execute domain logic from this file — it routes to the Skill.
 
 Available Skills (load on semantic match only):
+- brainstorming     : Design-first exploration, spec generation, hard gates
 - taste-engine       : Maintain and apply user aesthetic preferences (taste-profile.json)
 - checkpoint-manager : Context persistence, mental model serialization (context-save/restore)
 - db-migration       : PostgreSQL/ORM schema changes, Prisma migrations
-- tdd-enforcer       : Test-first cycles, red-green-refactor enforcement
+- test-driven-development: Test-first cycles, red-green-refactor enforcement
+- writing-plans: TDD-first implementation planning from specs
+- using-git-worktrees: Create isolated git worktrees for parallel development
 - security-audit     : Auth flows, JWT, crypto, penetration staging
 - frontend-verify    : UI components, Browser Sub-Agent verification loops
 - refactor-legacy    : Multi-file AST dependency tracing, entangled codebases
@@ -58,6 +61,21 @@ Available Rules (loaded via glob — never manually invoked):
 - Every workflow generates: Task List → Implementation Plan → Code Diff → Walkthrough
 - Any workflow touching a UI component: Walkthrough must include browser recording
 - Any workflow touching /migrations or .env: Implementation Plan gate is mandatory
+
+## Workspace Isolation Policy
+
+All feature work and implementation plan execution MUST begin with the
+using-git-worktrees skill to ensure branch isolation and clean baseline
+verification before any code changes.
+
+## Worktree Directory Preference
+
+Preferred worktree directory: .worktrees/
+
+## Implementation Planning
+
+Before touching any code for a multi-step feature, activate the writing-plans skill.
+All plans are saved to docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.
