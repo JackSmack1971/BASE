@@ -35,21 +35,27 @@ if ! git rev-parse --is-inside-work-tree &>/dev/null; then
 fi
 
 # --- Build git log range ---
-GIT_RANGE=""
+GIT_RANGE_ARG=""
 if [[ -n "$FROM_TAG" && -n "$TO_TAG" ]]; then
-  GIT_RANGE="${FROM_TAG}..${TO_TAG}"
+  GIT_RANGE_ARG="${FROM_TAG}..${TO_TAG}"
 elif [[ -n "$FROM_TAG" ]]; then
-  GIT_RANGE="${FROM_TAG}..HEAD"
+  GIT_RANGE_ARG="${FROM_TAG}..HEAD"
 elif [[ -n "$SINCE" ]]; then
-  GIT_RANGE="--since=\"$SINCE\""
+  GIT_RANGE_ARG="--since=$SINCE"
 else
   # Default: last 14 days
-  SINCE=$(date -d "14 days ago" +%Y-%m-%d 2>/dev/null || date -v-14d +%Y-%m-%d)
-  GIT_RANGE="--since=\"$SINCE\""
+  SINCE=$(date -d "14 days ago" +%Y-%m-%d 2>/dev/null || date -v-14d +%Y-%m-%d || echo "")
+  if [[ -n "$SINCE" ]]; then
+    GIT_RANGE_ARG="--since=$SINCE"
+  fi
 fi
 
 # --- Fetch commits (hash | subject | body) ---
-COMMITS_RAW=$(eval git log $GIT_RANGE --pretty=format:'%H|||%s|||%b---COMMIT_END---' --no-merges 2>/dev/null || true)
+if [[ -n "$GIT_RANGE_ARG" ]]; then
+  COMMITS_RAW=$(git log "$GIT_RANGE_ARG" --pretty=format:'%H|||%s|||%b---COMMIT_END---' --no-merges 2>/dev/null || true)
+else
+  COMMITS_RAW=$(git log --pretty=format:'%H|||%s|||%b---COMMIT_END---' --no-merges 2>/dev/null || true)
+fi
 
 COMMIT_COUNT=0
 FILTERED_COUNT=0
@@ -64,21 +70,22 @@ while IFS= read -r -d $'\0' BLOCK; do
   [[ -z "$BLOCK" ]] && continue
   COMMIT_COUNT=$((COMMIT_COUNT + 1))
 
-  HASH=$(echo "$BLOCK"  | awk -F'|||' '{print $1}')
-  SUBJECT=$(echo "$BLOCK" | awk -F'|||' '{print $2}')
-  BODY=$(echo "$BLOCK"    | awk -F'|||' '{print $3}' | tr '\n' ' ')
+  # Extract hash, subject, and body using awk with explicit separators
+  HASH=$(echo "$BLOCK" | awk -F'\\|\\|\\|' '{print $1}' | tr -d '\n')
+  SUBJECT=$(echo "$BLOCK" | awk -F'\\|\\|\\|' '{print $2}' | tr -d '\n')
+  BODY=$(echo "$BLOCK" | awk -F'\\|\\|\\|' '{print $3}' | tr '\n' ' ')
 
   # Categorize
   CATEGORY="improvements"
-  if echo "$SUBJECT" | grep -qiE "^(feat|feature|add):"; then
+  if [[ "$SUBJECT" =~ ^(feat|feature|add):? ]]; then
     CATEGORY="features"
-  elif echo "$SUBJECT" | grep -qiE "^fix:|^bugfix:|^bug:"; then
+  elif [[ "$SUBJECT" =~ ^(fix|bugfix|bug):? ]]; then
     CATEGORY="fixes"
-  elif echo "$SUBJECT" | grep -qiE "BREAKING CHANGE|!:"; then
+  elif [[ "$SUBJECT" =~ (BREAKING CHANGE|!) ]]; then
     CATEGORY="breaking"
-  elif echo "$SUBJECT" | grep -qiE "^security:|^sec:"; then
+  elif [[ "$SUBJECT" =~ ^(security|sec):? ]]; then
     CATEGORY="security"
-  elif echo "$SUBJECT" | grep -qiE "$NOISE_PATTERNS"; then
+  elif [[ "$SUBJECT" =~ $NOISE_PATTERNS ]]; then
     CATEGORY="internal"
   fi
 
@@ -98,7 +105,7 @@ while IFS= read -r -d $'\0' BLOCK; do
   if [[ "$FIRST" == true ]]; then FIRST=false; else ENTRIES_JSON+=","; fi
   ENTRIES_JSON+="{\"hash\":\"$HASH_SHORT\",\"subject\":\"$SUBJECT_SAFE\",\"body\":\"$BODY_SAFE\",\"category\":\"$CATEGORY\"}"
 
-done < <(echo "$COMMITS_RAW" | awk 'BEGIN{RS="---COMMIT_END---"} NF{printf "%s\0", $0}')
+done < <(printf "%s" "$COMMITS_RAW" | awk 'BEGIN{RS="---COMMIT_END---"} NF{printf "%s\0", $0}')
 
 ENTRIES_JSON+="]"
 
