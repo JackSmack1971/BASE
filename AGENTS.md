@@ -24,6 +24,7 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 # It does NOT execute domain logic from this file — it routes to the Skill.
 
 Available Skills (load on semantic match only):
+- checkpoint-manager: Context persistence, mental model serialization (context-save/restore)
 - db-migration       : PostgreSQL/ORM schema changes, Prisma migrations
 - tdd-enforcer       : Test-first cycles, red-green-refactor enforcement
 - security-audit     : Auth flows, JWT, crypto, penetration staging
@@ -51,6 +52,7 @@ Available Rules (loaded via glob — never manually invoked):
 - planning-guard      : Activates on multi-step tasks without active session-state
 
 ## Artifact Conventions
+- Every destructive workflow triggers: context-save → Implementation Plan → Execution → context-save
 - Every workflow generates: Task List → Implementation Plan → Code Diff → Walkthrough
 - Any workflow touching a UI component: Walkthrough must include browser recording
 - Any workflow touching /migrations or .env: Implementation Plan gate is mandatory

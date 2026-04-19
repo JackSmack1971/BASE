@@ -14,6 +14,7 @@ token_budget: 1500
 
 ## Non-Negotiable Safety Guardrails
 - REQUIRE Implementation Plan Artifact for all /migrations, .env, auth, or schema writes.
+- REQUIRE `context-save` before any destructive write or foundational refactor.
 - File ownership MUST be declared in Task List before parallel execution.
 - NEVER retain verbatim tool outputs in knowledge/ (evict post-absorption).
 - SKILL files MUST stay within 300-800 token range (moderate modularity).
