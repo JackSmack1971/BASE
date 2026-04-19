@@ -5,8 +5,14 @@
 
 --- 
 
-## ✨ What is BASE? BASE is the **foundational skill library and playbook** for Google Antigravity agents. It gives your AI coding agents:- A consistent "Master Antigravity Integration Architect" persona- Non-negotiable safety guardrails- Dozens of expert skills (Prisma, TDD, security, modern UI, Terraform, etc.)- Reusable workflows for planning, migrations, PR reviews, and more- Moderate modularity and artifact-first execution Clone this repo into any new project (or fork it) and your Antigravity agents will immediately operate with professional structure, safety, and velocity. --- ## 🚀 Quick Start 1. **Fork or clone** this repository into your new project: ```bash git clone https://github.com/JackSmack1971/BASE.git my-new-project cd my-new-project
+## ✨ What is BASE? BASE is the **foundational skill library and playbook** for Google Antigravity agents. It gives your AI coding agents:- A consistent "Master Antigravity Integration Architect" persona- Non-negotiable safety guardrails- Dozens of expert skills (Prisma, TDD, security, modern UI, Terraform, etc.)- Reusable workflows for planning, migrations, PR reviews, and more- Moderate modularity and artifact-first execution Clone this repo into any new project (or fork it) and your Antigravity agents will immediately operate with professional structure, safety, and velocity. 
 
+--- 
+
+## 🚀 Quick Start 1. **Fork or clone** this repository into your new project: 
+
+```bash git clone https://github.com/JackSmack1971/BASE.git my-new-project cd my-new-project
+```
 2. **Open the project in Antigravity** (or Cursor/VS Code with Antigravity integration).
   
 3. The agent will automatically discover:
