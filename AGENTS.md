@@ -25,6 +25,7 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 
 Available Skills (load on semantic match only):
 - brainstorming     : Design-first exploration, spec generation, hard gates
+- simplification-cascades: Identifies unifying abstractions to collapse complexity
 - taste-engine       : Maintain and apply user aesthetic preferences (taste-profile.json)
 - checkpoint-manager : Context persistence, mental model serialization (context-save/restore)
 - db-migration       : PostgreSQL/ORM schema changes, Prisma migrations
@@ -36,6 +37,7 @@ Available Skills (load on semantic match only):
 - refactor-legacy    : Multi-file AST dependency tracing, entangled codebases
 - context-compact    : Session compaction, trajectory summarization
 - planning           : Persistent multi-session planning, KV-cache optimization
+- changelog-generator: Automated customer-facing release notes from git history
 
 Available Workflows (trigger via /workflow):
 - plan-complex-task  : Orchestrate multi-phase task bootstrapping and state merging
