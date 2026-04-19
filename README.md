@@ -14,7 +14,8 @@
 
 ## 🚀 Quick Start 1. **Fork or clone** this repository into your new project: 
 
-```bash git clone https://github.com/JackSmack1971/BASE.git my-new-project cd my-new-project
+```
+bash git clone https://github.com/JackSmack1971/BASE.git my-new-project cd my-new-project
 ```
 2. **Open the project in Antigravity** (or Cursor/VS Code with Antigravity integration).
   
