@@ -35,14 +35,20 @@ Available Skills (load on semantic match only):
 Available Workflows (trigger via /workflow):
 - plan-complex-task  : Orchestrate multi-phase task bootstrapping and state merging
 - plan-status        : Read-only dashboard for active planning session state
+- full-stack-feature : Multi-agent orchestration for end-to-end feature delivery
+- db-migration-safe  : Production-grade DB schema changes with mandatory backup checks
+- context-compact    : Asynchronous session compaction and trajectory inventory
+- monthly-maintenance: Automated workspace audit following the April 2026 stack
+- pr-review          : Automated diff analysis and audit for pull requests
 
 Available Rules (loaded via glob — never manually invoked):
-- code-style         : Activates on *.ts, *.js, *.py
-- migration-guard    : Activates on **/migrations/**, *.migration.ts
-- api-contracts      : Activates on **/api/**, *.api.ts
-- frontend-rules     : Activates on *.jsx, *.tsx, *.vue
-- security-audit     : Activates on **/auth/**, **/crypto/**
-- planning-guard     : Activates on multi-step tasks without active session-state
+- _master             : Persona + non-negotiable guardrails (alwaysApply:true)
+- code-style          : Activates on *.ts, *.js, *.py
+- migration-guard     : Activates on **/migrations/**, *.migration.ts
+- api-contracts       : Activates on **/api/**, *.api.ts
+- frontend-rules      : Activates on *.jsx, *.tsx, *.vue
+- security-audit      : Activates on **/auth/**, **/crypto/**
+- planning-guard      : Activates on multi-step tasks without active session-state
 
 ## Artifact Conventions
 - Every workflow generates: Task List → Implementation Plan → Code Diff → Walkthrough
