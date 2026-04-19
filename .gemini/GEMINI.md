@@ -20,3 +20,7 @@
 
 - Declare file ownership in the Task List artifact before spawning parallel agents; freeze shared contracts first
 - Merge rule: most advanced phase status wins; BLOCKER log preserves full union with all entries retained
+
+## Skill Pointers
+
+- Use context-engineering skill when: starting a new session, agent output quality degrades, switching between features, setting up or auditing GEMINI.md / AGENTS.md / rules files, generating a session brain dump, or detecting context rot.
