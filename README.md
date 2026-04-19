@@ -18,6 +18,7 @@ It gives your AI coding agents:
 - **Non-negotiable safety guardrails**
 - Dozens of expert skills (Prisma, TDD, security, modern UI, Terraform, etc.)
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
+- **Context Engineering** (automated hierarchy audits and brain-dumps)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)
 
 Clone this repo into any new project (or fork it) and your Antigravity agents will immediately operate with professional structure, extreme safety, and high-velocity design intelligence.
@@ -100,6 +101,7 @@ BASE/
 ## 🔥 Key Skills & Workflows
 
 - **checkpoint-manager** → GStack-style trajectory persistence
+- **context-engineering** → Automated hierarchy audits and brain-dumps
 - **taste-engine** → Personalized design intelligence
 - **anti-slop-guard** → Aesthetic quality enforcement
 - **db-migration, tdd-enforcer, security-audit, frontend-verify**, etc.
