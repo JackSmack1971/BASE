@@ -11,12 +11,12 @@
 
 ## ✨ What is BASE?
 
-BASE is the **foundational skill library and playbook** for Google Antigravity agents.
-
-It gives your AI coding agents:
-- A consistent "Master Antigravity Integration Architect" persona
-- **Non-negotiable safety guardrails**
-- Dozens of expert skills (Prisma, TDD, security, modern UI, Terraform, etc.)
+- **Dozens of Expert Skills** (categorized for full-stack excellence):
+    - **Architecture**: Brainstorming, persistent multi-session Planning, Context Engineering
+    - **Database**: Deep Prisma Expertise, PostgreSQL Design, Migration Safety Guardrails
+    - **Frontend**: Tailwind Design Systems, Radix UI, Shadcn, Taste Engine + Anti-Slop Guard
+    - **Reliability**: TDD Enforcer, Systematic Debugging, WCAG 2.2 Accessibility Audits
+    - **Operations**: Terraform IaC, Changelog Automation, Git Worktree Isolation
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **Context Engineering** (automated hierarchy audits and brain-dumps)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)
