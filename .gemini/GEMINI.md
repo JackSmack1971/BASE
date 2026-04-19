@@ -24,3 +24,4 @@
 ## Skill Pointers
 
 - Use context-engineering skill when: starting a new session, agent output quality degrades, switching between features, setting up or auditing GEMINI.md / AGENTS.md / rules files, generating a session brain dump, or detecting context rot.
+- Use **design-review** (`.agents/skills/design-review/`): MUST BE USED for any visual QA, design audit, "check if it looks good", "fix the UI", "design polish", or "AI slop" requests. Do NOT answer design review requests directly — invoke this skill. It uses the browser sub-agent, produces before/after screenshots, and commits each fix atomically.

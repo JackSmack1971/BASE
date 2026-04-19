@@ -5,6 +5,21 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-04-19
+
+### ✨ New Features
+
+- **Design Review Skill**: Deployed the critical-risk design-review skill to `.agents/skills/design-review/`.
+  - Integrates Antigravity browser sub-agent for automated visual audits.
+  - Implements a 10-category, 80+ item design checklist (hierarchy, typography, AI slop, etc.).
+  - Orchestrates atomic design fix loops with before/after screenshot verification.
+  - Adds 6 supporting workflow scripts for session setup, git safety, and telemetry.
+
+### 🔧 Improvements
+
+- **Skill Registry**: Added `design-review` to the official registry and global `GEMINI.md` activation hub.
+- **BDD Testing**: Added `design_review_spec.sh` with passing status for session and git setup logic.
+
 ## [0.4.1] - 2026-04-19
 
 ### ✨ New Features

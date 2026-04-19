@@ -101,6 +101,7 @@ BASE/
 ## 🔥 Key Skills & Workflows
 
 - **checkpoint-manager** → GStack-style trajectory persistence
+- **design-review** → Senior designer audits & atomic UI fixes
 - **context-engineering** → Automated hierarchy audits and brain-dumps
 - **taste-engine** → Personalized design intelligence
 - **anti-slop-guard** → Aesthetic quality enforcement

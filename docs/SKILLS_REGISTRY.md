@@ -13,6 +13,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **writing-plans** | Generating TDD-ready implementation plans from specs. | "Plan this feature", "Plan before coding", "Turn spec into tasks" |
 | **context-engineering** | Auditing context layers and initializing sessions. | "Set up context", "Agent is hallucinating", "Audit context" |
 | **context-compact** | Compacting long sessions to maintain reasoning focus. | "Summarize session", "Compact context", "Switching features" |
+| **design-review** | Senior designer audit and atomic UI fix loop using browser sub-agent. | "Audit design", "Visual QA", "Design polish", "UI review" |
 
 ## 🗄️ Database & Infrastructure
 
