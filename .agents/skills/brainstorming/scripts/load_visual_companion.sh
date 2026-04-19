@@ -15,6 +15,6 @@ fi
 CONTENT=$(cat "$GUIDE_PATH")
 
 # Use Python to escape the guide content into a JSON string
-ESCAPED_GUIDE=$(echo "$CONTENT" | python -c "import sys, json; print(json.dumps(sys.stdin.read()))")
+ESCAPED_GUIDE=$(echo "$CONTENT" | python3 -c "import sys, json; print(json.dumps(sys.stdin.read()))")
 
 echo "{\"load_result\": \"SUCCESS\", \"guide\": $ESCAPED_GUIDE}"

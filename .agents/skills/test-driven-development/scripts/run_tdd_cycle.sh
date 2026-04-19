@@ -40,15 +40,15 @@ fi
 # --- Helper: JSON Escape ---
 # Replaces jq -Rs . with Python for broader compatibility
 json_escape() {
-  python -c "import sys, json; print(json.dumps(sys.stdin.read()))"
+  python3 -c "import sys, json; print(json.dumps(sys.stdin.read()))"
 }
 
 # --- Detect Test Runner ---
 RUNNER=""
 if [[ -f "package.json" ]]; then
-  if grep -q '"vitest"' package.json 2>/dev/null; then
+  if grep -qi "vitest" package.json 2>/dev/null; then
     RUNNER="npx vitest run"
-  elif grep -q '"jest"' package.json 2>/dev/null; then
+  elif grep -qi "jest" package.json 2>/dev/null; then
     RUNNER="npx jest"
   fi
 fi

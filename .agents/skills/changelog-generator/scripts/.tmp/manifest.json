@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "commit_count": 2,
+  "filtered_count": 2,
+  "categories": {
+    "features": 1,
+    "improvements": 1,
+    "fixes": 0,
+    "breaking": 0,
+    "security": 0,
+    "internal": 0
+  },
+  "style_guide_loaded": false,
+  "output_path": "./CHANGELOG_DRAFT.md",
+  "raw_categorized_path": "/mnt/c/Users/click/Desktop/BASE_PROJECT/.agents/skills/changelog-generator/scripts/.tmp/categorized_commits.json",
+  "format": "release"
+}

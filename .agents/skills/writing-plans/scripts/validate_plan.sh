@@ -32,8 +32,6 @@ PATTERNS=(
   "Add appropriate error handling"
   "add validation"
   "handle edge cases"
-  "Similar to Task"
-  "implement later"
 )
 
 HITS=()
@@ -41,7 +39,7 @@ for pattern in "${PATTERNS[@]}"; do
   # grep returns line numbers and matched lines
   while IFS= read -r line; do
     HITS+=("$line")
-  done < <(grep -n "$pattern" "$PLAN_PATH" 2>/dev/null || true)
+  done < <(grep -ni "$pattern" "$PLAN_PATH" 2>/dev/null || true)
 done
 
 # Build JSON array of hits

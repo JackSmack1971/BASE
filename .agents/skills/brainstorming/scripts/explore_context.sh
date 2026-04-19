@@ -7,7 +7,7 @@ set -euo pipefail
 
 # Helper for JSON string escaping (replaces jq -Rs .)
 json_escape() {
-  python -c "import sys, json; print(json.dumps(sys.stdin.read()))"
+  python3 -c "import sys, json; print(json.dumps(sys.stdin.read()))"
 }
 
 # --- Directory structure (2 levels) ---
@@ -70,7 +70,7 @@ if [[ -z "$TREE" && -z "$COMMITS" ]]; then
 fi
 
 # Use Python to assemble final JSON for deterministic parsing
-python -c "
+python3 -c "
 import sys, json
 data = {
     'context_result': 'FOUND',
