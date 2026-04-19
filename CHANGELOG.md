@@ -5,6 +5,22 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-04-19
+
+### ✨ New Features
+
+- **Agent Browser Skill**: Deployed the `agent-browser` skill to `.agents/skills/agent-browser/`.
+  - Interfaces with the `agent-browser` CLI for high-fidelity browser automation.
+  - Supports web pages, Electron apps (VS Code, Slack, Figma, etc.), and Slack workspace automation.
+  - Adds 6 supporting workflow scripts for session management, snapshots, interaction, screenshots, and scraping.
+  - Implements BDD verification via `spec/skills/agent-browser/agent_browser_spec.sh`.
+
+### 🔧 Improvements
+
+- **Integration Playbook**: Added browser automation guardrails and specialized routing to `AGENTS.md`.
+- **Skill Registry**: Integrated `agent-browser` into the official registry and global `GEMINI.md` hub.
+- **Project Baseline**: Synchronized documentation across `README.md` and `GEMINI.md`.
+
 ## [0.5.0] - 2026-04-19
 
 ### ✨ New Features

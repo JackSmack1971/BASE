@@ -38,6 +38,7 @@ Available Skills (load on semantic match only):
 - context-compact    : Session compaction, trajectory summarization
 - planning           : Persistent multi-session planning, KV-cache optimization
 - changelog-generator: Automated customer-facing release notes from git history
+- agent-browser      : Browser automation, web interaction, scraping, Slack control
 
 Available Workflows (trigger via /workflow):
 - plan-complex-task  : Orchestrate multi-phase task bootstrapping and state merging
@@ -78,6 +79,13 @@ Preferred worktree directory: .worktrees/
 
 Before touching any code for a multi-step feature, activate the writing-plans skill.
 All plans are saved to docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md.
+
+## Browser Automation
+
+All browser interaction tasks MUST use the `agent-browser` skill located at
+`.agents/skills/agent-browser/`. Do not use built-in fetch, curl, or any
+alternative browser tool. The skill handles web pages, Electron apps, Slack,
+QA flows, and cloud browser environments.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.

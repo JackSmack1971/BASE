@@ -14,6 +14,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **context-engineering** | Auditing context layers and initializing sessions. | "Set up context", "Agent is hallucinating", "Audit context" |
 | **context-compact** | Compacting long sessions to maintain reasoning focus. | "Summarize session", "Compact context", "Switching features" |
 | **design-review** | Senior designer audit and atomic UI fix loop using browser sub-agent. | "Audit design", "Visual QA", "Design polish", "UI review" |
+| **agent-browser** | Professional browser automation, web interaction, and Slack control via CLI. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
 
 ## 🗄️ Database & Infrastructure
 
