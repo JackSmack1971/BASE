@@ -52,6 +52,19 @@ Automatically saves mental model + Git patch before any destructive operation.
 
 ---
 
+## 🧪 Skill Testing (Automated BDD)
+
+All core skill scripts are now backed by a deterministic ShellSpec (Bash BDD) testing framework. This ensures that expert intelligence remains reliable across different environments.
+
+- **Requirement**: All new or modified skill scripts **must** include a corresponding ShellSpec test suite in the `spec/` directory.
+- **Run Tests (Windows)**: Use the native PowerShell wrapper:
+  ```powershell
+  .\tests\test-skills.ps1
+  ```
+- **Infrastructure**: Uses ShellSpec for Bash unit testing with full mocking of `git`, `date`, and `filesystem` operations.
+
+---
+
 ## 🎨 Advanced Intelligence (Opt-in)
 
 ### Taste Engine
@@ -73,13 +86,12 @@ Automatically flags and prevents generic AI design patterns (indigo drift, unifo
 ```bash
 BASE/
 ├── .agents/                  # Core agent intelligence
-│   ├── rules/                # Global + domain rules (including anti-slop-guard)
-│   ├── skills/               # Expert skills (checkpoint-manager, taste-engine, etc.)
-│   └── checkpoints/          # Trajectory backups
+│   ├── rules/                # Global + domain rules
+│   ├── skills/               # Expert scripts (checkpoint-manager, etc.)
+├── spec/                     # ShellSpec BDD test suites
+├── tests/                    # Native test wrappers (test-skills.ps1)
 ├── .gemini/antigravity/knowledge/
-│   └── taste-profile.json    # Persistent user taste memory
 ├── AGENTS.md                 # Master routing + persona
-├── .antigravity-local.md     # Local config (checkpoints + opt-ins)
 └── README.md
 ```
 
