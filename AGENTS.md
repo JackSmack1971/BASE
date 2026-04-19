@@ -30,6 +30,11 @@ Available Skills (load on semantic match only):
 - frontend-verify    : UI components, Browser Sub-Agent verification loops
 - refactor-legacy    : Multi-file AST dependency tracing, entangled codebases
 - context-compact    : Session compaction, trajectory summarization
+- planning           : Persistent multi-session planning, KV-cache optimization
+
+Available Workflows (trigger via /workflow):
+- plan-complex-task  : Orchestrate multi-phase task bootstrapping and state merging
+- plan-status        : Read-only dashboard for active planning session state
 
 Available Rules (loaded via glob — never manually invoked):
 - code-style         : Activates on *.ts, *.js, *.py
@@ -37,6 +42,7 @@ Available Rules (loaded via glob — never manually invoked):
 - api-contracts      : Activates on **/api/**, *.api.ts
 - frontend-rules     : Activates on *.jsx, *.tsx, *.vue
 - security-audit     : Activates on **/auth/**, **/crypto/**
+- planning-guard     : Activates on multi-step tasks without active session-state
 
 ## Artifact Conventions
 - Every workflow generates: Task List → Implementation Plan → Code Diff → Walkthrough
