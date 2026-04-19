@@ -5,6 +5,21 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-04-19
+
+### ✨ New Features
+
+- **Automated Skill Testing**: Implemented a comprehensive ShellSpec (Bash BDD) testing framework for all project agent skills.
+  - Added test suites for `brainstorming`, `changelog-generator`, `simplification-cascades`, `test-driven-development`, `using-git-worktrees`, and `writing-plans`.
+  - Created a native PowerShell 5.1 wrapper (`tests/test-skills.ps1`) for seamless integration in Windows environments.
+  - **Requirement**: All new or modified skill scripts must now include a corresponding ShellSpec test suite in the `spec/` directory to ensure architectural integrity and reliability.
+
+### 🔧 Improvements
+
+- **Skill Stability**: Hardened all core skill scripts with Python 3 support, POSIX path resolution, and carriage return sanitization for cross-environment reliability.
+- **Simplification Cascades**: Fixed mathematical syntax errors in signal detection logic.
+- **Writing Plans**: Eliminated duplicate placeholder patterns in the validation engine.
+
 ## [0.3.0] - 2026-04-19
 
 ### ✨ New Features
