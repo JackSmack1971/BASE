@@ -103,7 +103,7 @@ BASE/
 - **checkpoint-manager** → GStack-style trajectory persistence
 - **agent-browser** → Professional browser automation & Slack control
 - **design-review** → Senior designer audits & atomic UI fixes
-- **context-engineering** → Automated hierarchy audits and brain-dumps
+- **context-compact** → Phase-based trajectory summarization & state preservation
 - **taste-engine** → Personalized design intelligence
 - **anti-slop-guard** → Aesthetic quality enforcement
 - **db-migration, tdd-enforcer, security-audit, frontend-verify**, etc.

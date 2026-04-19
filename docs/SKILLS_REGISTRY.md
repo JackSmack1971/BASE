@@ -12,9 +12,9 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **planning** | Tracking progress on complex, multi-phase tasks. | "Create a plan", "Multi-step project", "Break this down" |
 | **writing-plans** | Generating TDD-ready implementation plans from specs. | "Plan this feature", "Plan before coding", "Turn spec into tasks" |
 | **context-engineering** | Auditing context layers and initializing sessions. | "Set up context", "Agent is hallucinating", "Audit context" |
-| **context-compact** | Compacting long sessions to maintain reasoning focus. | "Summarize session", "Compact context", "Switching features" |
+| **context-compact** | Phase-based trajectory summarization & session-state preservation. | utilization_pct â‰¥ 70, HTTP 400 errors, "Compact context" |
 | **design-review** | Senior designer audit and atomic UI fix loop using browser sub-agent. | "Audit design", "Visual QA", "Design polish", "UI review" |
-| **agent-browser** | Professional browser automation, web interaction, and Slack control via CLI. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
+| **agent-browser** | Professional browser automation, QA flows, and cloud browser environments. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
 
 ## 🗄️ Database & Infrastructure
 

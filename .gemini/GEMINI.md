@@ -23,6 +23,7 @@
 
 ## Skill Pointers
 
+- Use **context-compact** (`.agents/skills/context-compact/`): MUST BE USED when context utilization reaches 70% or above, or when an HTTP 400 context overflow error occurs. It synthesized a durable mission trajectory into `session-state.md` and requires human approval of the compaction summary before resuming.
 - Use context-engineering skill when: starting a new session, agent output quality degrades, switching between features, setting up or auditing GEMINI.md / AGENTS.md / rules files, generating a session brain dump, or detecting context rot.
 - Use **design-review** (`.agents/skills/design-review/`): MUST BE USED for any visual QA, design audit, "check if it looks good", "fix the UI", "design polish", or "AI slop" requests. Do NOT answer design review requests directly — invoke this skill. It uses the browser sub-agent, produces before/after screenshots, and commits each fix atomically.
 - Use **agent-browser** (`.agents/skills/agent-browser/`): MUST BE USED for ALL browser automation, web interaction, form submission, screenshot capture, data scraping, QA testing, Electron app control, Slack automation, Vercel Sandbox, and AgentCore cloud browser tasks. Always run `verify_install.sh` first.

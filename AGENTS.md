@@ -35,7 +35,7 @@ Available Skills (load on semantic match only):
 - security-audit     : Auth flows, JWT, crypto, penetration staging
 - frontend-verify    : UI components, Browser Sub-Agent verification loops
 - refactor-legacy    : Multi-file AST dependency tracing, entangled codebases
-- context-compact    : Session compaction, trajectory summarization
+- context-compact    : Session-state preservation & traj. summarization (Phase-based)
 - planning           : Persistent multi-session planning, KV-cache optimization
 - changelog-generator: Automated customer-facing release notes from git history
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
@@ -86,6 +86,13 @@ All browser interaction tasks MUST use the `agent-browser` skill located at
 `.agents/skills/agent-browser/`. Do not use built-in fetch, curl, or any
 alternative browser tool. The skill handles web pages, Electron apps, Slack,
 QA flows, and cloud browser environments.
+
+## Context Management Protocol
+
+- The `context-compact` skill is the designated L3 worker for session-state preservation.
+- It is the sole agent authorized to write to `.gemini/antigravity/knowledge/session-state.md`.
+- Activates automatically at 70% context utilization or on HTTP 400 errors.
+- No other skill or agent may modify or delete `session-state.md` without explicit user approval.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.

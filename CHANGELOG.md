@@ -5,6 +5,22 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-04-19
+
+### ✨ New Features
+
+- **Context Compact Skill v1.1.0**: Deployed the advanced trajectory summarization engine to `.agents/skills/context-compact/`.
+  - Implements a 4-phase pipeline: Assessment, Synthesis, Reinitialization, and Audit.
+  - Enforces a mandatory **HARD STOP** for human inspection of the compaction summary.
+  - Distills mission state into a persistent `session-state.md` artifact.
+  - Implements BDD verification via `spec/skills/context-compact/context_compact_spec.sh`.
+
+### 🔧 Improvements
+
+- **Context Management Protocol**: Established `context-compact` as the primary L3 worker in `AGENTS.md` and `GEMINI.md`.
+- **Registry Alignment**: Updated `docs/SKILLS_REGISTRY.md` with deterministic triggers and phase-based categorization.
+- **Project Sustainability**: Synchronized README.md with the latest context management doctrines.
+
 ## [0.6.0] - 2026-04-19
 
 ### ✨ New Features
