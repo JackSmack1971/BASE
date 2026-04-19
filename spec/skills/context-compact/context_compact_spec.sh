@@ -3,25 +3,19 @@
 
 Describe 'context-compact scripts'
   SPEC_ROOT_POSIX=$(bash -c "pwd -P")
+  TMP_ROOT="$SPEC_ROOT_POSIX/.tmp_context_compact"
+  TMP_KNOWLEDGE="$TMP_ROOT/.gemini/antigravity/knowledge"
 
-  setup() {
-    export TMP_ROOT="$SPEC_ROOT_POSIX/.tmp_context_compact"
-    export TMP_KNOWLEDGE="$TMP_ROOT/.gemini/antigravity/knowledge"
-    mkdir -p "$TMP_KNOWLEDGE"
-  }
-
-  cleanup() {
-    rm -rf "$SPEC_ROOT_POSIX/.tmp_context_compact"
-  }
+  BeforeAll 'mkdir -p "$TMP_KNOWLEDGE"'
+  AfterAll 'rm -rf "$TMP_ROOT"'
 
   Mock bc
-    echo "75.00"
+    echo "75.0"
   End
 
   Mock jq
     case "$1" in
       -r)
-        # Simple mock for jq -r
         case "$2" in
           ".current_objective"*) echo "Test Objective" ;;
           ".finalized_decisions"*) echo "Test Decision" ;;
@@ -39,7 +33,7 @@ Describe 'context-compact scripts'
     It 'returns token utilization statistics'
       When run bash "$SPEC_ROOT_POSIX/.agents/skills/context-compact/scripts/measure_tokens.sh" --window-ceiling 1000000
       The output should include '"status": "OK"'
-      The output should include '"utilization_pct": 75.00'
+      The output should include '"utilization_pct": 75.0'
       The status should be success
     End
   End
@@ -81,7 +75,7 @@ Describe 'context-compact scripts'
     It 'generates a compaction summary'
       When run bash "$SPEC_ROOT_POSIX/.agents/skills/context-compact/scripts/compaction_audit.sh" --session-id "test_session" --knowledge-dir "$TMP_KNOWLEDGE" --tokens-before 100000 --tokens-evicted 80000
       The output should include '"status": "OK"'
-      The output should include '"reduction_pct": 75.00'
+      The output should include '"reduction_pct": 75.0'
       The status should be success
       Assert [ -f "$TMP_KNOWLEDGE/compaction_summary_test_session.json" ]
     End

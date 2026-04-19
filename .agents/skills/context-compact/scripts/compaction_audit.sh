@@ -45,5 +45,5 @@ cat > "$SUMMARY_PATH" <<EOF
 EOF
 
 # Verify reduction target met
-THRESHOLD_MET=$(echo "$REDUCTION_PCT >= 70" | bc -l 2>/dev/null || echo 0)
+THRESHOLD_MET=$(echo "$REDUCTION_PCT >= 70" | bc -l 2>/dev/null | grep -q "1" && echo 1 || echo 0)
 echo "{\"status\": \"OK\", \"summary_path\": \"${SUMMARY_PATH}\", \"reduction_pct\": ${REDUCTION_PCT}, \"threshold_met\": $([ "$THRESHOLD_MET" -eq 1 ] && echo true || echo false)}"
