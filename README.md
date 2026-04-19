@@ -35,7 +35,7 @@ Clone this repo into any new project (or fork it) and your Antigravity agents wi
 
 3. The agent will automatically discover:
    
-   - `.agent/` (skills, rules, workflows)
+   - `.agents/` (skills, rules, workflows)
    - `AGENTS.md` (master persona + routing)
    - `.antigravity-local.md` (local config)
 
@@ -51,7 +51,7 @@ Clone this repo into any new project (or fork it) and your Antigravity agents wi
 
 ```bash
 BASE/
-├── .agent/                  # ← Core agent intelligence
+├── .agents/                 # ← Core agent intelligence
 │   ├── rules/               # Global & domain-specific rules
 │   ├── skills/              # Expert skill modules (Prisma, TDD, etc.)
 │   └── workflows/           # Reusable multi-step workflows
@@ -99,9 +99,9 @@ The Master Antigravity Integration Architect **always** follows these rules:
 
 ## 🛠️ How to Extend
 
-1. Add new skills in `.agent/skills/`
-2. Add new rules in `.agent/rules/`
-3. Add new workflows in `.agent/workflows/`
+1. Add new skills in `.agents/skills/`
+2. Add new rules in `.agents/rules/`
+3. Add new workflows in `.agents/workflows/`
 4. Update the **Routing Index** in `AGENTS.md`
 
 All domain logic stays in the skill files — `AGENTS.md` remains the clean routing + guardrail index.

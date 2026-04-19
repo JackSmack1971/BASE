@@ -10,7 +10,7 @@
 - No new blockers identified during development or maintenance.
 
 ## Files Modified
-- .agent/ (Maintenance verification)
+- .agents/ (Maintenance verification)
 
 ## Next Planned Action
 - Standby for mission-critical engineering directives.

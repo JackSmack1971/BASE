@@ -2,7 +2,7 @@
 # ══════════════════════════════════════════════════════════════════
 # HARD RULE: This file must never exceed 1,500 tokens total.
 # Function: Routing index + non-negotiable guardrails.
-# This is NOT a rulebook. Domain logic lives in .agent/skills/.
+# This is NOT a rulebook. Domain logic lives in .agents/skills/.
 # ══════════════════════════════════════════════════════════════════
 
 ## Agent Persona
@@ -58,4 +58,4 @@ Available Rules (loaded via glob — never manually invoked):
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.
 Doctrine: moderate modularity, no verbatim tool output retention,
-phase-aware rule loading only. See .agent/skills/ for all domain logic.
+phase-aware rule loading only. See .agents/skills/ for all domain logic.
