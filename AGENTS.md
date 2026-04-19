@@ -24,6 +24,7 @@ Master Antigravity Integration Architect – Bridge Builder for the April 2026 P
 # It does NOT execute domain logic from this file — it routes to the Skill.
 
 Available Skills (load on semantic match only):
+- ui-ux-pro-max     : Design intelligence, palettes, typography (Phase 0-6).
 - brainstorming     : Design-first exploration, spec generation, hard gates
 - simplification-cascades: Identifies unifying abstractions to collapse complexity
 - taste-engine       : Maintain and apply user aesthetic preferences (taste-profile.json)
@@ -93,6 +94,12 @@ QA flows, and cloud browser environments.
 - It is the sole agent authorized to write to `.gemini/antigravity/knowledge/session-state.md`.
 - Activates automatically at 70% context utilization or on HTTP 400 errors.
 - No other skill or agent may modify or delete `session-state.md` without explicit user approval.
+
+## UI/UX Standards
+
+All front-end, UI, and UX work in this project MUST use the ui-ux-pro-max skill
+located at .agents/skills/ui-ux-pro-max/. Follow its Phase 0-6 execution protocol.
+Do not generate UI code without first running the design system generation step.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.

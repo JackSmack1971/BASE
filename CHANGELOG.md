@@ -5,6 +5,16 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-04-19
+
+### ✨ New Features
+
+- **UI/UX Pro Max Skill (v1.1.0)**: Deployed a comprehensive design intelligence suite to `.agents/skills/ui-ux-pro-max/`.
+  - Added 161 color palettes, 57 font pairings, and support for 10 tech stacks.
+  - Implemented 6-phase execution protocol: Prereq Check, Classification, Design System Gen, Domain Search, UX Audit, and Pre-Delivery Checklist.
+  - Added deterministic verifiers: `check_prereqs.sh`, `verify_output.py`, and `run_checklist.sh`.
+  - Integrated hierarchical design system persistence in `resources/design-system/`.
+
 ## [0.7.0] - 2026-04-19
 
 ### ✨ New Features

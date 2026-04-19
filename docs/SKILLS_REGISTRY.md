@@ -12,7 +12,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **planning** | Tracking progress on complex, multi-phase tasks. | "Create a plan", "Multi-step project", "Break this down" |
 | **writing-plans** | Generating TDD-ready implementation plans from specs. | "Plan this feature", "Plan before coding", "Turn spec into tasks" |
 | **context-engineering** | Auditing context layers and initializing sessions. | "Set up context", "Agent is hallucinating", "Audit context" |
-| **context-compact** | Phase-based trajectory summarization & session-state preservation. | utilization_pct â‰¥ 70, HTTP 400 errors, "Compact context" |
+| **context-compact** | Phase-based trajectory summarization & session-state preservation. | utilization_pct ≥ 70, HTTP 400 errors, "Compact context" |
 | **design-review** | Senior designer audit and atomic UI fix loop using browser sub-agent. | "Audit design", "Visual QA", "Design polish", "UI review" |
 | **agent-browser** | Professional browser automation, QA flows, and cloud browser environments. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
 
@@ -29,6 +29,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 
 | Skill | Optimal Use Case | Activation Trigger |
 |---|---|---|
+| **ui-ux-pro-max** | Comprehensive design intelligence with 161 palettes and UX auditing. | "Design UI", "UX audit", "Style system", "UI/UX" |
 | **taste-engine** | Applying user-specific aesthetic preferences to UI work. | "Apply taste", "Approve style", "Personalize design" |
 | **anti-slop-guard** | Preventing generic AI design patterns in TSX/CSS. | [Automatic on UI files] |
 | **tailwind-design-system** | Building token-based design systems with Tailwind v4. | "Tailwind tokens", "Setup theme", "Design system" |

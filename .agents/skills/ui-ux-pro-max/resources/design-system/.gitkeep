@@ -1,0 +1,4 @@
+# This directory holds persisted design system artifacts.
+# MASTER.md — Global Source of Truth
+# pages/    — Page-specific overrides
+# Do not delete. Managed by ui-ux-pro-max skill via --persist flag.

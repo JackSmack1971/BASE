@@ -19,6 +19,7 @@
     - **Operations**: Terraform IaC, Changelog Automation, Git Worktree Isolation
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **Context Engineering** (automated hierarchy audits and brain-dumps)
+- **UI/UX Pro Max** (161 color palettes, 99 UX guidelines, and 10 tech stacks)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)
 
 Clone this repo into any new project (or fork it) and your Antigravity agents will immediately operate with professional structure, extreme safety, and high-velocity design intelligence.
