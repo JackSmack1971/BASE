@@ -66,6 +66,11 @@
   High-leverage monorepo orchestration for large agent-orchestrated codebases. Enforces moderate modularity, shared UI tokens, and cross-package TDD with high-performance caching. 
   Triggers: "set up a monorepo", "migrate to turborepo", "add a new package", "orchestrate cross-package tests", "share tailwind config", "fix workspace boundaries", "optimize build caching", "run monorepo self-healing audit".
 
+- **documentation-rot-guard** (`.agents/skills/documentation-rot-guard/`): 
+  Detects documentation rot using semantic drift (pgvector + ast-grep) and generates draft fixes for TypeScript/Next.js/Turborepo codebases. Proactive CI gate with bidirectional sync. 
+  Triggers: "check documentation rot", "audit docs", "fix doc drift", "run docs consistency check", "self-documenting codebase", "detect stale docs".
+
+
 ## Knowledge Items
 
 - **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.

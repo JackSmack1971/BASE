@@ -18,6 +18,8 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **agent-browser** | Professional browser automation, QA flows, and cloud browser environments. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
 
 | **turborepo-monorepo-architect** | High-leverage monorepo orchestration for large agent-orchestrated codebases. | "Set up monorepo", "Migrate to turborepo", "Optimize build caching" |
+| **documentation-rot-guard** | Detect and resolve semantic drift between source code and documentation. | "Check documentation rot", "Audit docs", "Self-documenting codebase" |
+
 
 ## 🗄️ Database & Infrastructure
 

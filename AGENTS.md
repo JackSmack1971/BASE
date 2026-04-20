@@ -29,6 +29,8 @@ Available Skills (load on semantic match only):
 - article-research-dialectic: Adversarial research for article generation: advocate/skeptic/synthesizer.
 - article-qa-auditor     : Editorial quality gate: drafting (@engineer) and auditing (@qa).
 - article-red-team        : Adversarial challenge and threat classification.
+- documentation-rot-guard: Detect and resolve semantic drift between source code and documentation.
+
 - ui-ux-pro-max     : Design intelligence, palettes, typography (Phase 0-6).
 - brainstorming     : Design-first exploration, spec generation, hard gates
 - simplification-cascades: Identifies unifying abstractions to collapse complexity
@@ -73,6 +75,11 @@ These three skills form a complete **closed-loop agentic delivery platform**:
 - `turborepo-monorepo-architect` (folder: `.agents/skills/turborepo-monorepo-architect`)
   High-leverage monorepo orchestration for large agent-orchestrated codebases. Enforces moderate modularity, shared UI tokens, and cross-package TDD with high-performance caching.  
   **Triggers**: "set up a monorepo", "migrate to turborepo", "add a new package", "orchestrate cross-package tests", "share tailwind config", "fix workspace boundaries", "optimize build caching", "run monorepo self-healing audit"
+
+- `documentation-rot-guard` (folder: `.agents/skills/documentation-rot-guard`)
+  Detects documentation rot using semantic drift (pgvector + ast-grep) and generates draft fixes for TypeScript/Next.js/Turborepo codebases. Proactive CI gate with bidirectional sync.  
+  **Triggers**: "check documentation rot", "audit docs", "fix doc drift", "run docs consistency check", "self-documenting codebase", "detect stale docs"
+
 
 **Synergy Note**: The `ci-cd-orchestrator` automatically injects OpenTelemetry spans/metrics into every matrix job and gates deployment behind `playwright-visual-regression` + `production-code-audit`. Every agent-generated change is now traced, visually verified, audited, and deployed with zero manual glue.
 
