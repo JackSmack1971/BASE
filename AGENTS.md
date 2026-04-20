@@ -45,6 +45,7 @@ Available Skills (load on semantic match only):
 - planning           : Persistent multi-session planning, KV-cache optimization
 - changelog-generator: Automated customer-facing release notes from git history
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
+- vector-rag-pgvector  : Postgres-native vector search + RAG patterns for agent memory.
 
 ## Advanced Delivery & Observability Skills (New – April 2026)
 

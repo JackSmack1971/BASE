@@ -55,6 +55,13 @@
   "orchestrate release", "agent run ci", "full deployment". 
   Integrates `production-code-audit`, `playwright-visual-regression`, and `terraform-infrastructure`.
 
+- **vector-rag-pgvector** (`.agents/skills/vector-rag-pgvector/`): 
+  MUST BE USED for implementing Postgres-native vector search, long-term agent memory, 
+  and hybrid RRF (Reciprocal Rank Fusion) retrieval. 
+  Triggers: "setup pgvector rag", "implement agent memory", "search with hybrid RRF", 
+  "vector search setup", "rag patterns", "store gemini embeddings".
+  Synergizes with `context-compact` for persistent session state storage.
+
 ## Knowledge Items
 
 - **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.
