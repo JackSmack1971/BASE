@@ -46,19 +46,28 @@ Available Skills (load on semantic match only):
 - changelog-generator: Automated customer-facing release notes from git history
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
 
-## Visual QA & Orchestration Skills (New – April 2026)
+## Advanced Delivery & Observability Skills (New – April 2026)
+
+These three skills form a complete **closed-loop agentic delivery platform**:
+- Visual QA → CI/CD Orchestration → Full-Spectrum Observability
 
 - `playwright-visual-regression` (folder: `.agents/skills/playwright-visual-regression`)
-  Advanced closed-loop visual regression testing for Next.js + React + Shadcn/Tailwind using Playwright.  
-  Includes component-level snapshots, Visual TDD Cycle (`visualTddCycle()`), self-healing locators, dark-mode variants, CI sharding, and pixel-perfect assertions.  
+  Closed-loop visual regression testing for Next.js + React + Shadcn/Tailwind using Playwright.  
+  Component snapshots, `visualTddCycle()` helper, self-healing locators, dark-mode variants, CI sharding, and pixel-perfect assertions.  
   **Triggers**: "run visual regression", "visual QA", "screenshot tests", "component snapshots", "fix visual tests", "playwright visual"
 
 - `ci-cd-orchestrator` (folder: `.agents/skills/ci-cd-orchestrator`)
-  Agent-native CI/CD orchestration engine. Generates and triggers `workflow_dispatch` GitHub Actions with hybrid deployment support (Vercel frontend + Docker/Terraform backend).  
-  Features matrixed parallel jobs, quality gates (`production-code-audit` + `playwright-visual-regression` + TDD), semantic-versioning hooks, and REST API triggering from the Master Antigravity agent.  
-  **Triggers**: "setup ci/cd", "run full pipeline", "deploy to production", "trigger workflow", "orchestrate release", "agent run ci", "full deployment"
+  Agent-native CI/CD engine. Generates and triggers `workflow_dispatch` GitHub Actions with hybrid deployment (Vercel frontend + Docker/Terraform backend).  
+  Matrixed parallel jobs, quality gates (`production-code-audit` + `playwright-visual-regression` + TDD), semantic-versioning hooks, and REST API triggering.  
+  **Triggers**: "setup ci/cd", "run full pipeline", "deploy to production", "trigger workflow", "orchestrate release", "agent run ci"
 
-**Synergy Note**: These two skills form a complete closed-loop delivery system. The orchestrator automatically includes the visual-regression job in every matrix run and blocks deployment until both audit and visual gates pass.
+- `opentelemetry-expert` (folder: `.agents/skills/opentelemetry-expert`)
+  Full-spectrum observability (tracing + metrics + logging) with hybrid instrumentation for Node.js/TypeScript.  
+  Auto-instrumentation for infra + manual self-diagnostic spans for agentic workflows (Planning → Code → Audit → Visual QA → Deploy).  
+  Prometheus exporter + context propagation for production-grade self-diagnostics.  
+  **Triggers**: "add observability", "instrument with opentelemetry", "setup tracing", "self-diagnostic spans", "prometheus metrics", "otel expert"
+
+**Synergy Note**: The `ci-cd-orchestrator` automatically injects OpenTelemetry spans/metrics into every matrix job and gates deployment behind `playwright-visual-regression` + `production-code-audit`. Every agent-generated change is now traced, visually verified, audited, and deployed with zero manual glue.
 
 
 Available Workflows (trigger via /workflow):
