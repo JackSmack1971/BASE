@@ -17,6 +17,8 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **design-review** | Senior designer audit and atomic UI fix loop using browser sub-agent. | "Audit design", "Visual QA", "Design polish", "UI review" |
 | **agent-browser** | Professional browser automation, QA flows, and cloud browser environments. | "Open website", "Navigate to", "Scrape data", "Slack unread", "QA test" |
 
+| **turborepo-monorepo-architect** | High-leverage monorepo orchestration for large agent-orchestrated codebases. | "Set up monorepo", "Migrate to turborepo", "Optimize build caching" |
+
 ## 🗄️ Database & Infrastructure
 
 | Skill | Optimal Use Case | Activation Trigger |

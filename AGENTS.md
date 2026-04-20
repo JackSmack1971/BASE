@@ -46,6 +46,8 @@ Available Skills (load on semantic match only):
 - changelog-generator: Automated customer-facing release notes from git history
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
 - vector-rag-pgvector  : Postgres-native vector search + RAG patterns for agent memory.
+- turborepo-monorepo-architect: High-leverage monorepo orchestration for large agent-orchestrated codebases.
+
 
 ## Advanced Delivery & Observability Skills (New – April 2026)
 
@@ -68,7 +70,12 @@ These three skills form a complete **closed-loop agentic delivery platform**:
   Prometheus exporter + context propagation for production-grade self-diagnostics.  
   **Triggers**: "add observability", "instrument with opentelemetry", "setup tracing", "self-diagnostic spans", "prometheus metrics", "otel expert"
 
+- `turborepo-monorepo-architect` (folder: `.agents/skills/turborepo-monorepo-architect`)
+  High-leverage monorepo orchestration for large agent-orchestrated codebases. Enforces moderate modularity, shared UI tokens, and cross-package TDD with high-performance caching.  
+  **Triggers**: "set up a monorepo", "migrate to turborepo", "add a new package", "orchestrate cross-package tests", "share tailwind config", "fix workspace boundaries", "optimize build caching", "run monorepo self-healing audit"
+
 **Synergy Note**: The `ci-cd-orchestrator` automatically injects OpenTelemetry spans/metrics into every matrix job and gates deployment behind `playwright-visual-regression` + `production-code-audit`. Every agent-generated change is now traced, visually verified, audited, and deployed with zero manual glue.
+
 
 
 Available Workflows (trigger via /workflow):

@@ -62,6 +62,10 @@
   "vector search setup", "rag patterns", "store gemini embeddings".
   Synergizes with `context-compact` for persistent session state storage.
 
+- **turborepo-monorepo-architect** (`.agents/skills/turborepo-monorepo-architect/`): 
+  High-leverage monorepo orchestration for large agent-orchestrated codebases. Enforces moderate modularity, shared UI tokens, and cross-package TDD with high-performance caching. 
+  Triggers: "set up a monorepo", "migrate to turborepo", "add a new package", "orchestrate cross-package tests", "share tailwind config", "fix workspace boundaries", "optimize build caching", "run monorepo self-healing audit".
+
 ## Knowledge Items
 
 - **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.
