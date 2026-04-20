@@ -21,7 +21,7 @@
     },
     "docs-rot-audit": {
       "dependsOn": ["index-rag"],
-      "inputs": ["src/**/*.ts", "src/**/*.tsx", "README.md", "docs/**/*.md"],
+      "inputs": ["src/**/*.ts", "src/**/*.tsx", "README.md", "docs/**/*.md", ".agents/skills/**/*.md"],
       "cache": true
     }
   }

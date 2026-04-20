@@ -148,7 +148,7 @@ Parse the user's request for these overrides before beginning Phase 1:
 **Diff-aware mode:**
 run_command: git diff main...HEAD --name-only
 Map changed files to affected pages/routes. Detect running app:
-run_command: for port in 3000 4000 8080; do curl -s -o /dev/null -w "PORT:$port STATUS:%{http_code}\n" http://localhost:$port 2>/dev/null || true; done
+run_command: for port in 3000 4000 8080; do curl -s -o /dev/null -w "PORT:$port STATUS:%{http_code}\n" `http://localhost:$port` 2>/dev/null || true; done
 Audit only affected pages.
 
 ---

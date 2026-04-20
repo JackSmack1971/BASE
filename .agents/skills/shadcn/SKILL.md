@@ -16,9 +16,9 @@ A framework for building high-quality UI components and design systems. Componen
 
 | Resource | Description |
 |----------|-------------|
-| [Critical Rules](file:///C:/workspaces/antigravity-meta/.agents/skills/shadcn/resources/shadcn-critical-rules.md) | Styling, forms, and composition rules. |
-| [Patterns & Selection](file:///C:/workspaces/antigravity-meta/.agents/skills/shadcn/resources/shadcn-patterns-and-selection.md) | Map of needs to components and code examples. |
-| [CLI & Workflow](file:///C:/workspaces/antigravity-meta/.agents/skills/shadcn/resources/shadcn-cli-and-workflow.md) | Initialization, adding components, and smart merging. |
+| [Critical Rules](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/resources/shadcn-critical-rules.md) | Styling, forms, and composition rules. |
+| [Patterns & Selection](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/resources/shadcn-patterns-and-selection.md) | Map of needs to components and code examples. |
+| [CLI & Workflow](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/resources/shadcn-cli-and-workflow.md) | Initialization, adding components, and smart merging. |
 
 ## Core Principles
 
@@ -35,9 +35,9 @@ A framework for building high-quality UI components and design systems. Componen
 - **View Docs**: `npx shadcn@latest docs <component>`
 
 ## Related Rules
-- [Styling Rules](file:///agents/skills/shadcn/rules/styling.md)
-- [Forms Rules](file:///agents/skills/shadcn/rules/forms.md)
-- [Composition Rules](file:///agents/skills/shadcn/rules/composition.md)
+- [Styling Rules](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/rules/styling.md)
+- [Forms Rules](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/rules/forms.md)
+- [Composition Rules](file:///c:/Users/click/Desktop/BASE_PROJECT/.agents/skills/shadcn/rules/composition.md)
 
 ## Summary
 Build accessible, performant design systems through CLI-driven component composition and semantic styling.
