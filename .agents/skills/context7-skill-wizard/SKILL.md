@@ -15,12 +15,11 @@ review and packaging.
 
 Before Phase 1, verify the Context7 MCP server is active by calling `listTools` or `resolve-library-id` with a test query.
 
-> "Connect the Context7 MCP server via IDE Settings → Integrations → MCP Servers, then
-> retry this skill."
-
-Load `references/wizard-phase-guide.md` at session start for question templates and
-topic derivation tables. Load `references/skill-template.md` immediately before Phase 6
-synthesis — do not load earlier to preserve context budget.
+**Phase 0 — Diagnostic Check:**
+If the Context7 MCP tools are not detected or return a connectivity error:
+1. Report the failure to the user.
+2. Offer "Web Fallback Mode" (using `search_web` and `read_url_content`).
+3. If the user accepts, proceed using the **Web Fallback Mode** branch in Phases 2, 4, and 5.
 
 ---
 
@@ -35,20 +34,27 @@ Extract the core domain from the user's message. If absent or ambiguous, ask:
 > 'React component performance optimization' · 'OAuth with NextAuth.js'"
 
 Store as `$DOMAIN`. Do not proceed until `$DOMAIN` is concrete and names at least one
-specific technology.
+specific technology. 
+
+If in **Web Fallback Mode**, explicitly inform the user that you are switching to official documentation sites and GitHub repositories for research.
 
 ---
 
 ## Phase 2 — Library Discovery
 
+**Standard Mode:**
 Call `context7:resolve-library-id` with `$DOMAIN` as the query.
+
+**Web Fallback Mode:**
+1. Call `search_web` for "[DOMAIN] library GitHub" to identify the official repository.
+2. Identify the "ID" as the `owner/repo` string (e.g., `/vercel/vercel`).
 
 **Present results in this exact format:**
 Found [N] relevant libraries:
 
 [Library Name] — [one-line description]
-ID: [context7-compatible-id]
-⭐ [stars] | [snippet-count] doc snippets
+ID: [context7-compatible-id or owner/repo]
+⭐ [stars] | [snippet-count] doc snippets (N/A for Web Mode)
 ...
 
 
@@ -99,10 +105,13 @@ For each library in `$SELECTED_LIBS[]`:
 
 1. Derive 1–3 topic strings from `$SCOPE_ANSWERS[]` using the Topic String Derivation
    table in `references/wizard-phase-guide.md`
-2. Call `context7:query-docs`:
+2. **Standard Mode:** Call `context7:query-docs`:
    - `libraryId`: selected library ID
    - `query`: primary derived topic string
-3. Store snippets as `$DOCS[library_name]`
+3. **Web Fallback Mode:**
+   - Call `search_web` for "[libraryName] [topicString] official documentation".
+   - Select the most relevant 2-3 URLs and call `read_url_content` to extract snippets.
+4. Store snippets as `$DOCS[library_name]`
 
 If a fetch returns empty: retry with a broader topic string. If still empty, note the
 coverage gap and continue — do not halt.
@@ -110,7 +119,7 @@ coverage gap and continue — do not halt.
 **Display transparency block after all fetches:**
 Documentation fetched:
 
-[Library Name]: [N] snippets | Topics: [topic1, topic2] | Source: [URL]
+[Library Name]: [N] snippets | Topics: [topic1, topic2] | Source: [URL or Context7]
 
 
 ---
@@ -122,7 +131,7 @@ output skill until this file is loaded and its rules are internalized.
 
 **Synthesis rules:**
 1. **Name:** derive from `$DOMAIN` in kebab-case gerund form per skill-template.md Name
-   Field Rules table
+   Field Rules table. Use a short semantic name for the folder (e.g. `ci-cd-orchestrator`) if the title is long.
 2. **Description:** third-person, trigger-rich, ≤1024 chars — apply all rules from
    skill-template.md Description Field Rules; include "Trigger on:" and "Do NOT trigger
    for:" clauses
@@ -215,6 +224,7 @@ Return to Phase 4. `$SELECTED_LIBS[]` is preserved. All `$DOCS[]` cache is clear
   before packaging. Fix all `❌ FAIL` items — do not skip or defer any failure.
 - ALWAYS generate the Implementation Plan artifact in Phase 6 and wait for approval
   before writing the skill body.
-- If Context7 MCP becomes unreachable mid-workflow: pause, report the error, and output a
-  state summary preserving `$DOMAIN`, `$SELECTED_LIBS[]`, and `$SCOPE_ANSWERS[]` so the
-  user can resume without restarting.
+- ALWAYS verify the artifact directory path for the current session BEFORE writing any implementation plans or tasks.
+- If Context7 MCP becomes unreachable mid-workflow: pause, report the error, and offer "Web Fallback Mode".
+- If a pip install fails with "externally-managed-environment", retry using `uv pip install --system` or `--break-system-packages`.
+- Prefer short semantic names for skill folders (e.g. `ci-cd-orchestrator`) while maintaining the gerund form for the Title.

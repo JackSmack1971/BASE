@@ -49,6 +49,12 @@
   Triggers: "run visual regression", "setup playwright E2E", "fix failing visual tests", 
   "automate visual QA", "check screenshot diffs".
 
+- **ci-cd-orchestrator** (`.agents/skills/ci-cd-orchestrator/`): 
+  MUST BE USED for setting up, managing, or triggering GitHub Actions CI/CD workflows. 
+  Triggers: "setup ci/cd", "run full pipeline", "deploy to production", "trigger workflow", 
+  "orchestrate release", "agent run ci", "full deployment". 
+  Integrates `production-code-audit`, `playwright-visual-regression`, and `terraform-infrastructure`.
+
 ## Knowledge Items
 
 - **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.

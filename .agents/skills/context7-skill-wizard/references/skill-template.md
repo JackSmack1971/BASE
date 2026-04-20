@@ -30,6 +30,11 @@ allowed-tools: [narrowly scoped — e.g., "Read Bash" — or omit if no pre-auth
 - "Clerk auth for Next.js App Router" → `authenticating-with-clerk-nextjs`
 - "React component performance optimization" → `optimizing-react-component-performance`
 
+**Folder Name Preference:** 
+If the official gerund name is >24 characters or contains redundant platform names, use a short semantic noun for the directory:
+- `ci-cd-github-actions-orchestrating` (name) → `ci-cd-orchestrator` (folder)
+- `authenticating-with-clerk-nextjs` (name) → `clerk-auth` (folder)
+
 ---
 
 ## Description Field Rules

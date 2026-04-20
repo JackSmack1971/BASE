@@ -69,6 +69,14 @@ Good questions share these properties:
 - Q: Pattern?
   Options: Basic queries / Advanced filtering / Raw SQL escape hatches / Seeding & fixtures
 
+**CI/CD & Orchestration — GitHub Actions, Vercel, Docker**
+- Q: Deployment target?
+  Options: Hybrid (Vercel + Docker) / Unified Vercel / Pure Docker/Kubernetes / Multi-cloud
+- Q: "Agent-Native" Trigger?
+  Options: GitHub workflow_dispatch / REST API hooks / Custom webhooks / Manual only
+- Q: Security/Quality Gate?
+  Options: Production-code-audit + TDD / Semantic Versioning / Visual Regression / All of the above
+
 **Generic fallback (unrecognized domain):**
 - Q: Primary use case?
   Options: Getting started / Core feature implementation / Advanced patterns / Debugging
@@ -104,6 +112,10 @@ Map `$SCOPE_ANSWERS[]` to Context7 topic strings:
 | Concern | "graceful shutdown" | "graceful shutdown cancellation" |
 | Scope | "App Router" | "app router server components" |
 | Stage | "initial setup" | "installation setup configuration" |
+| Hybrid | "Vercel + Docker" | "vercel deployment docker containerization" |
+| API | "workflow_dispatch" | "github actions workflow_dispatch api" |
+| Synergy | "Audit + TDD" | "security audit test driven development" |
+| Pattern | "Advanced filtration" | "filtering sorting pagination" |
 
 Combine related answers into one topic string when possible to minimize API calls for `context7:query-docs`.
 

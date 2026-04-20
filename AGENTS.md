@@ -44,8 +44,22 @@ Available Skills (load on semantic match only):
 - context-compact    : Session-state preservation & traj. summarization (Phase-based)
 - planning           : Persistent multi-session planning, KV-cache optimization
 - changelog-generator: Automated customer-facing release notes from git history
-- playwright-visual-regression: Next.js visual QA, self-healing E2E, and Visual TDD loops.
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
+
+## Visual QA & Orchestration Skills (New – April 2026)
+
+- `playwright-visual-regression` (folder: `.agents/skills/playwright-visual-regression`)
+  Advanced closed-loop visual regression testing for Next.js + React + Shadcn/Tailwind using Playwright.  
+  Includes component-level snapshots, Visual TDD Cycle (`visualTddCycle()`), self-healing locators, dark-mode variants, CI sharding, and pixel-perfect assertions.  
+  **Triggers**: "run visual regression", "visual QA", "screenshot tests", "component snapshots", "fix visual tests", "playwright visual"
+
+- `ci-cd-orchestrator` (folder: `.agents/skills/ci-cd-orchestrator`)
+  Agent-native CI/CD orchestration engine. Generates and triggers `workflow_dispatch` GitHub Actions with hybrid deployment support (Vercel frontend + Docker/Terraform backend).  
+  Features matrixed parallel jobs, quality gates (`production-code-audit` + `playwright-visual-regression` + TDD), semantic-versioning hooks, and REST API triggering from the Master Antigravity agent.  
+  **Triggers**: "setup ci/cd", "run full pipeline", "deploy to production", "trigger workflow", "orchestrate release", "agent run ci", "full deployment"
+
+**Synergy Note**: These two skills form a complete closed-loop delivery system. The orchestrator automatically includes the visual-regression job in every matrix run and blocks deployment until both audit and visual gates pass.
+
 
 Available Workflows (trigger via /workflow):
 - full-stack-article : Multi-agent orchestration for adversarial article production.

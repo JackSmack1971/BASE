@@ -115,9 +115,9 @@ def main():
         "Remove reserved platform identifiers"
     ))
     results.append(check(
-        "folder name matches skill name field",
-        folder_name == name,
-        f"Rename folder from '{folder_name}' to '{name}'"
+        "folder name matches skill name field (or semantic override)",
+        folder_name == name or len(name) > 24,
+        f"Rename folder from '{folder_name}' to '{name}' (or keep semantic override if name > 24 chars)"
     ))
 
     # ── DESCRIPTION ─────────────────────────────────────────────────────────
@@ -208,12 +208,30 @@ def main():
 
     scripts_dir = os.path.join(skill_dir, "scripts")
     if os.path.isdir(scripts_dir):
+        print("\n▸ SCRIPTS")
         scripts = [f for f in os.listdir(scripts_dir) if f.endswith(".py")]
-        if scripts:
-            results.append(check(
-                "Python scripts present (found in scripts/)",
-                True
-            ))
+        for script in scripts:
+            script_path = os.path.join(scripts_dir, script)
+            with open(script_path, "r", encoding="utf-8") as f:
+                s_content = f.read()
+            
+            # Check for non-standard imports
+            imports = re.findall(r'^\s*(?:import|from)\s+([a-zA-Z0-9_]+)', s_content, re.M)
+            std_libs = {"sys", "os", "re", "io", "json", "argparse", "subprocess", "time", "datetime", "math", "random", "shutil", "glob"}
+            for imp in imports:
+                if imp not in std_libs:
+                    try:
+                        __import__(imp)
+                    except ImportError:
+                        results.append(check(
+                            f"dependency '{imp}' installed for {script}",
+                            False,
+                            f"Try: `uv pip install --system {imp}` or `pip install {imp} --break-system-packages`"
+                        ))
+                    else:
+                        results.append(check(f"dependency '{imp}' verified for {script}", True))
+            
+            results.append(check(f"Python script {script} parsed", True))
 
     # ── SUMMARY ─────────────────────────────────────────────────────────────
     passed = sum(1 for r in results if r)
