@@ -5,6 +5,7 @@
 [![Antigravity](https://img.shields.io/badge/Antigravity-Enabled-8B5CF6)](https://antigravity.google) 
 [![Gemini](https://img.shields.io/badge/Powered%20by-Gemini-4285F4)](https://deepmind.google/technologies/gemini/)
 [![GStack](https://img.shields.io/badge/GStack%20Integrated-Phase%202-00D4FF)](https://github.com/garrytan/gstack)
+[![Turborepo](https://img.shields.io/badge/Turborepo-Monorepo-EF4444)](https://turbo.build/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
@@ -20,7 +21,8 @@
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **10x Product Strategy** (structured opportunity discovery & prioritization)
 - **Adversarial Content Factory** (4-skill article production pipeline: Dialectic Research + Red Team review)
-- **Context Engineering** (automated hierarchy audits and brain-dumps)
+- **Closed-Loop Documentation Health** (RAG-based drift detection + link integrity audits)
+- **Agent-Native CI/CD Orchestration** (Automated matrix workflows + OpenTelemetry metrics)
 - **UI/UX Pro Max** (161 color palettes, 99 UX guidelines, and 10 tech stacks)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)
 
@@ -42,6 +44,28 @@ Clone this repo into any new project (or fork it) and your Antigravity agents wi
    - `context-save [message]` — manual checkpoint
    - `checkpoint-status` — see trajectory health
    - (Opt-in) Enable Taste Engine & Anti-Slop in `.antigravity-local.md`
+
+---
+
+## 🏛️ Monorepo Architecture
+
+BASE is now a high-velocity **Turborepo Monorepo**, ensuring modularity, shared configuration, and lightning-fast builds across frontend and backend services.
+
+- **Command Central**: Use `npx turbo run <task>` to execute across all packages.
+- **Packages**: Internal utilities and shared configurations live in `packages/`.
+- **Apps**: Deployable services (Frontend/Backend) live in `apps/`.
+- **Caching**: Local and Remote caching enabled for sub-100ms developer iteration.
+
+---
+
+## 📚 Documentation Health (RAG-Integrated)
+
+We've implemented a closed-loop documentation maintenance system using **@repo/rag-utils**. It projectively prevents "Documentation Rot" through automated CI gates.
+
+- **Link Integrity**: Automated validation of all Markdown links (internal and external).
+- **Semantic Drift**: RAG-based scoring to detect when code and documentation diverge conceptually.
+- **Audit Task**: `npx turbo run docs-rot-audit` triggers a full health scan.
+- **Indexing**: `npx turbo run index-rag` generates embeddings for expert skill discovery.
 
 ---
 
@@ -89,13 +113,14 @@ Automatically flags and prevents generic AI design patterns (indigo drift, unifo
 
 ```bash
 BASE/
-├── .agents/                  # Core agent intelligence
-│   ├── rules/                # Global + domain rules
-│   ├── skills/               # Expert scripts (checkpoint-manager, etc.)
-├── spec/                     # ShellSpec BDD test suites
-├── tests/                    # Native test wrappers (test-skills.ps1)
-├── .gemini/antigravity/knowledge/
-├── AGENTS.md                 # Master routing + persona
+├── apps/                    # Deployable applications (Next.js, Express, etc.)
+├── packages/                # Shared utilities & RAG tools (@repo/rag-utils)
+├── .agents/                 # Core agent intelligence
+│   ├── rules/               # Global + domain rules
+│   ├── skills/              # Expert scripts (checkpoint-manager, etc.)
+├── docs/                    # Global project documentation
+├── turbo.json               # Monorepo orchestration config
+├── AGENTS.md                # Master routing + persona
 └── README.md
 ```
 
@@ -103,6 +128,9 @@ BASE/
 
 ## 🔥 Key Skills & Workflows
 
+- **documentation-rot-guard** → Semantic drift & link integrity enforcement
+- **ci-cd-orchestrator** → Agent-native matrixed delivery pipeline
+- **opentelemetry-expert** → Tracing + metrics + self-diagnostic spans
 - **checkpoint-manager** → GStack-style trajectory persistence
 - **agent-browser** → Professional browser automation & Slack control
 - **design-review** → Senior designer audits & atomic UI fixes
