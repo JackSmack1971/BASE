@@ -1,0 +1,14 @@
+{
+  "name": "@repo/rag-utils",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "index-rag": "node scripts/index.js"
+  },
+  "dependencies": {
+    "@google-cloud/aiplatform": "^3.0.0",
+    "pg": "^8.0.0",
+    "pgvector": "^0.1.0"
+  }
+}

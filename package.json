@@ -1,0 +1,20 @@
+{
+  "name": "base-monorepo",
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "index-rag": "turbo index-rag",
+    "docs-rot-audit": "turbo docs-rot-audit"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  }
+}
