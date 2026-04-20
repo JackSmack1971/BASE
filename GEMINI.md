@@ -38,6 +38,17 @@
 
 - **article-red-team** (`.agents/skills/article-red-team/`): MUST BE USED for adversarial review and threat classification of article conclusions.
 
+- **context7-skill-wizard** (`.agents/skills/context7-skill-wizard/`): MUST BE USED
+  whenever the user requests skill generation, skill creation from documentation, or
+  any Context7-backed skill package. Triggers: "build a skill", "skill wizard",
+  "skill for [library]", "generate skill from docs", "context7 skill". Requires
+  Context7 MCP connected.
+
+- **playwright-visual-regression** (`.agents/skills/playwright-visual-regression/`): 
+  MUST BE USED for visual QA, E2E browser automation, and "visual TDD" loops. 
+  Triggers: "run visual regression", "setup playwright E2E", "fix failing visual tests", 
+  "automate visual QA", "check screenshot diffs".
+
 ## Knowledge Items
 
 - **pipeline-article-learnings**: Permanent artifact for autonomous trajectory storage.

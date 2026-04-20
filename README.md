@@ -15,7 +15,7 @@
     - **Architecture**: Brainstorming, persistent multi-session Planning, Context Engineering
     - **Database**: Deep Prisma Expertise, PostgreSQL Design, Migration Safety Guardrails
     - **Frontend**: Tailwind Design Systems, Radix UI, Shadcn, Taste Engine + Anti-Slop Guard
-    - **Reliability**: TDD Enforcer, Systematic Debugging, WCAG 2.2 Accessibility Audits
+    - **Reliability**: TDD Enforcer, Systematic Debugging, WCAG 2.2 Accessibility Audits, Playwright E2E & Visual QA
     - **Operations**: Terraform IaC, Changelog Automation, Git Worktree Isolation
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **10x Product Strategy** (structured opportunity discovery & prioritization)
@@ -109,6 +109,7 @@ BASE/
 - **context-compact** → Phase-based trajectory summarization & state preservation
 - **taste-engine** → Personalized design intelligence
 - **anti-slop-guard** → Aesthetic quality enforcement
+- **playwright-visual-regression** → Next.js visual QA & self-healing E2E
 - **db-migration, tdd-enforcer, security-audit, frontend-verify**, etc.
 
 ---

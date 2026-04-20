@@ -5,6 +5,17 @@ All notable changes to the BASE project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2026-04-19
+
+### ✨ New Features
+
+- **Playwright Visual Regression Skill (v1.0.0)**: Deployed a production-grade visual QA and E2E automation suite to `.agents/skills/playwright-visual-regression/`.
+  - Implemented Next.js/Shadcn/Tailwind optimized workflows with pixel-perfect thresholding.
+  - Added `visualTddCycle()` helper pattern for closed-loop visual TDD and automated baseline updates.
+  - Implemented self-healing locator strategies using semantic ARIA roles and test-ids.
+  - Added CI sharding and parallel execution patterns for high-performance regression checks.
+  - Integrated full-spectrum documentation via Context7 (React component testing, screenshot diffing, and sharding).
+
 ## [0.9.0] - 2026-04-19
 
 ### ✨ New Features

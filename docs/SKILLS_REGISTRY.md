@@ -46,6 +46,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **wcag-audit-patterns** | Ensuring WCAG 2.2 accessibility compliance. | "Accessibility audit", "Check contrast", "Screen reader test" |
 | **systematic-debugging** | Scientific diagnosis of bugs using root cause analysis. | "Debug this", "Fix bug", "Test failure" |
 | **frontend-verify** | Browser-based QA and interaction verification. | "Browser test", "Verify UI", "QA loop" |
+| **playwright-visual-regression** | Next.js visual QA, self-healing E2E, and Visual TDD. | "Visual regression", "Playwright E2E", "Automate QA" |
 
 ## ⚙️ Operations & Tooling
 
@@ -56,6 +57,7 @@ This directory catalogs the expert capabilities available to Antigravity agents 
 | **production-code-audit** | Transforming legacy code into professional codebases. | "Audit codebase", "Refactor for production", "Clean up" |
 | **simplification-cascades** | Reducing complexity and redundant implementations. | "Simplify this", "Too complex", "Reduce duplication" |
 | **semantic-versioning** | Automating project versioning and tag management. | "Bump version", "Release v1.2.0", "SemVer" |
+| **context7-skill-wizard** | Professional Agent Skill generation backed by live docs. | "Build a skill", "Skill wizard", "Context7 skill" |
 
 ## 📝 Content & Research
 

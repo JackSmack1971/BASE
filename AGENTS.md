@@ -44,6 +44,7 @@ Available Skills (load on semantic match only):
 - context-compact    : Session-state preservation & traj. summarization (Phase-based)
 - planning           : Persistent multi-session planning, KV-cache optimization
 - changelog-generator: Automated customer-facing release notes from git history
+- playwright-visual-regression: Next.js visual QA, self-healing E2E, and Visual TDD loops.
 - agent-browser      : Browser automation, web interaction, scraping, Slack control
 
 Available Workflows (trigger via /workflow):
@@ -112,6 +113,12 @@ Do not generate UI code without first running the design system generation step.
 When performing 10x product strategy analysis, use the game-changing-features skill
 located at .agents/skills/game-changing-features/. All session artifacts are written
 to .agents/docs/ai/<product-or-area>/10x/. Do not output strategy analysis to chat.
+
+## Agent Skills Policy
+
+All skill generation requests MUST route through `context7-skill-wizard`. Do not
+hallucinate skill content from training data. Every code reference in a generated skill
+must trace to a live Context7 documentation snippet.
 
 ## Context Budget Acknowledgment
 # Positioned last to anchor attention on constraints before execution begins.
