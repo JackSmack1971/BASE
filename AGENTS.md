@@ -30,6 +30,7 @@ Available Skills (load on semantic match only):
 - article-qa-auditor     : Editorial quality gate: drafting (@engineer) and auditing (@qa).
 - article-red-team        : Adversarial challenge and threat classification.
 - documentation-rot-guard: Detect and resolve semantic drift between source code and documentation.
+- agent-self-improvement-meta: Autonomous self-healing and evolution layer using Mastra.
 
 - ui-ux-pro-max     : Design intelligence, palettes, typography (Phase 0-6).
 - brainstorming     : Design-first exploration, spec generation, hard gates
@@ -80,8 +81,12 @@ These three skills form a complete **closed-loop agentic delivery platform**:
   Detects documentation rot using semantic drift (pgvector + ast-grep) and generates draft fixes for TypeScript/Next.js/Turborepo codebases. Proactive CI gate with bidirectional sync.  
   **Triggers**: "check documentation rot", "audit docs", "fix doc drift", "run docs consistency check", "self-documenting codebase", "detect stale docs"
 
+- `agent-self-improvement-meta` (folder: `.agents/skills/agent-self-improvement-meta`)
+  Closed-loop self-improvement layer for the BASE agent framework. Orchestrates Audit → Propose → Verify → PR cycles using Mastra to evolve skills, documentation, and prompts autonomously.
+  **Triggers**: "run self-improvement", "evolve skills", "meta-evolve", "improve agent OS", "self-healing meta loop"
 
-**Synergy Note**: The `ci-cd-orchestrator` automatically injects OpenTelemetry spans/metrics into every matrix job and gates deployment behind `playwright-visual-regression` + `production-code-audit`. Every agent-generated change is now traced, visually verified, audited, and deployed with zero manual glue.
+
+**Synergy Note**: The `ci-cd-orchestrator` automatically injects OpenTelemetry spans/metrics into every matrix job and gates deployment behind `playwright-visual-regression` + `production-code-audit`. The `agent-self-improvement-meta` layer monitors these outputs to autonomously propose optimizations via Pull Request.
 
 
 

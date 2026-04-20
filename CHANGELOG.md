@@ -1,187 +1,24 @@
 # Changelog
 
-All notable changes to the BASE project will be documented in this file.
+All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [0.10.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Playwright Visual Regression Skill (v1.0.0)**: Deployed a production-grade visual QA and E2E automation suite to `.agents/skills/playwright-visual-regression/`.
-  - Implemented Next.js/Shadcn/Tailwind optimized workflows with pixel-perfect thresholding.
-  - Added `visualTddCycle()` helper pattern for closed-loop visual TDD and automated baseline updates.
-  - Implemented self-healing locator strategies using semantic ARIA roles and test-ids.
-  - Added CI sharding and parallel execution patterns for high-performance regression checks.
-  - Integrated full-spectrum documentation via Context7 (React component testing, screenshot diffing, and sharding).
-
-## [0.9.0] - 2026-04-19
-
-### ✨ New Features
-
-- **10x Product Strategy Skill (v1.1.0)**: Deployed a structured opportunity discovery engine to `.agents/skills/game-changing-features/`.
-- **Adversarial Content Factory (v1.0.0)**: 4-skill article production pipeline deployed to `.agents/skills/`.
-  - Implemented `multi-agent-article-pipeline` orchestrator with deterministic triage.
-  - Implemented `article-research-dialectic` with adversarial Advocate/Skeptic streams.
-  - Implemented `article-qa-auditor` with drafting (@engineer) and audit (@qa) roles.
-  - Implemented `article-red-team` with attacking attack classification engine.
-  - Added deterministic ShellSpec BDD verification suite for all 4 pipeline scripts.
-  - Implemented 3-tier opportunity analysis: Massive, Medium, and Small Gems.
-  - Added ruthless evaluation matrix and stack-ranked prioritization protocol.
-  - Enforced mandatory artifact-only output to `.agents/docs/ai/<area>/10x/session-N.md`.
-  - Added deterministic session management via `init_session.sh` and `verify_artifact.sh`.
-
-## [0.8.0] - 2026-04-19
-
-### ✨ New Features
-
-- **UI/UX Pro Max Skill (v1.1.0)**: Deployed a comprehensive design intelligence suite to `.agents/skills/ui-ux-pro-max/`.
-  - Added 161 color palettes, 57 font pairings, and support for 10 tech stacks.
-  - Implemented 6-phase execution protocol: Prereq Check, Classification, Design System Gen, Domain Search, UX Audit, and Pre-Delivery Checklist.
-  - Added deterministic verifiers: `check_prereqs.sh`, `verify_output.py`, and `run_checklist.sh`.
-  - Integrated hierarchical design system persistence in `resources/design-system/`.
-
-## [0.7.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Context Compact Skill v1.1.0**: Deployed the advanced trajectory summarization engine to `.agents/skills/context-compact/`.
-  - Implements a 4-phase pipeline: Assessment, Synthesis, Reinitialization, and Audit.
-  - Enforces a mandatory **HARD STOP** for human inspection of the compaction summary.
-  - Distills mission state into a persistent `session-state.md` artifact.
-  - Implements BDD verification via `spec/skills/context-compact/context_compact_spec.sh`.
-
-### 🔧 Improvements
-
-- **Context Management Protocol**: Established `context-compact` as the primary L3 worker in `AGENTS.md` and `GEMINI.md`.
-- **Registry Alignment**: Updated `docs/SKILLS_REGISTRY.md` with deterministic triggers and phase-based categorization.
-- **Project Sustainability**: Synchronized README.md with the latest context management doctrines.
-
-## [0.6.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Agent Browser Skill**: Deployed the `agent-browser` skill to `.agents/skills/agent-browser/`.
-  - Interfaces with the `agent-browser` CLI for high-fidelity browser automation.
-  - Supports web pages, Electron apps (VS Code, Slack, Figma, etc.), and Slack workspace automation.
-  - Adds 6 supporting workflow scripts for session management, snapshots, interaction, screenshots, and scraping.
-  - Implements BDD verification via `spec/skills/agent-browser/agent_browser_spec.sh`.
-
-### 🔧 Improvements
-
-- **Integration Playbook**: Added browser automation guardrails and specialized routing to `AGENTS.md`.
-- **Skill Registry**: Integrated `agent-browser` into the official registry and global `GEMINI.md` hub.
-- **Project Baseline**: Synchronized documentation across `README.md` and `GEMINI.md`.
-
-## [0.5.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Design Review Skill**: Deployed the critical-risk design-review skill to `.agents/skills/design-review/`.
-  - Integrates Antigravity browser sub-agent for automated visual audits.
-  - Implements a 10-category, 80+ item design checklist (hierarchy, typography, AI slop, etc.).
-  - Orchestrates atomic design fix loops with before/after screenshot verification.
-  - Adds 6 supporting workflow scripts for session setup, git safety, and telemetry.
-
-### 🔧 Improvements
-
-- **Skill Registry**: Added `design-review` to the official registry and global `GEMINI.md` activation hub.
-- **BDD Testing**: Added `design_review_spec.sh` with passing status for session and git setup logic.
-
-## [0.4.1] - 2026-04-19
-
-### ✨ New Features
-
-- **Context Engineering Skill**: Deployed the primary context optimization and hierarchy audit skill to `.agents/skills/context-engineering/`.
-  - Added `audit_context.sh` for multi-layer hierarchy health checks.
-  - Added `generate_brain_dump.sh` for automated session initialization.
-  - Integrated `gemini_md_scaffold.md` for project-level architectural consistency.
-  - Registered skill in `.gemini/GEMINI.md` under the global **Skill Pointers** hub.
-
-### 🔧 Improvements
-
-- **Skill Testing (BDD)**: Authored `context_engineering_spec.sh` validating auditing logic and stack detection with a 100% pass rate.
-- **Global Strategy**: Established the **Skill Pointers** pattern in `GEMINI.md` to ensure reliable tool activation across all sessions.
-
-## [0.4.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Automated Skill Testing**: Implemented a comprehensive ShellSpec (Bash BDD) testing framework for all project agent skills.
-  - Added test suites for `brainstorming`, `changelog-generator`, `simplification-cascades`, `test-driven-development`, `using-git-worktrees`, and `writing-plans`.
-  - Created a native PowerShell 5.1 wrapper (`tests/test-skills.ps1`) for seamless integration in Windows environments.
-  - **Requirement**: All new or modified skill scripts must now include a corresponding ShellSpec test suite in the `spec/` directory to ensure architectural integrity and reliability.
-
-### 🔧 Improvements
-
-- **Skill Stability**: Hardened all core skill scripts with Python 3 support, POSIX path resolution, and carriage return sanitization for cross-environment reliability.
-- **Simplification Cascades**: Fixed mathematical syntax errors in signal detection logic.
-- **Writing Plans**: Eliminated duplicate placeholder patterns in the validation engine.
-
-## [0.3.0] - 2026-04-19
-
-### ✨ New Features
-
-- **Changelog Generator**: Added the core skill definition and implementation plan for automated release note generation.
-- **Skill Documentation**: Added examples and updated global documentation for the changelog-generator skill.
-- **Skills Modernization**: Completed the transition to modern, script-backed skills (Brainstorming, Writing Plans, Worktrees, TDD) and GStack integration.
-- **GStack Phase 2**: Integrated the Taste Engine and Anti-Slop Guard for personalized aesthetics and automated QA.
-- **GStack Phase 1**: Integrated Continuous Checkpoints for durable session state and mental model persistence.
-- **Modern Standards**: Migrated the core configuration directory to the `.agents/` plural standard for multi-agent support.
-- **Persistent Planning**: Established the complete v1.1 persistent planning architecture with L3 optimization and safety guards.
-
-### 🔧 Improvements
-
-- **Cleanup**: Systematically removed temporary integration artifacts (analysis, plan, walkthrough).
-- **Changelog**: Finalized GStack Phase 2 completion entries in the master changelog.
-- **README**: Finalized GStack integration documentation and project structure.
-- **Changelog Setup**: Established the comprehensive `CHANGELOG.md` following the Keep a Changelog v1.0.0 standard.
-- **Routing Index**: Updated the routing index with a full library of workflows and safety rules.
-- **README Links**: Added official Antigravity and DeepMind technology links for improved branding.
-- **README Fix**: Corrected code block formatting within the primary documentation.
-- **README Style**: Improved the formatting of the BASE description for better scannability.
-- **Quick Start**: Enhanced the README with a detailed BASE description and comprehensive quick-start guide.
-- **Onboarding**: Updated the README with supplementary information regarding the Antigravity starter template.
-- **Branding**: Revised the README for improved clarity, professional branding, and structural transparency.
-- **Media Assets**: Uploaded supporting files and images for the project documentation.
-- **Media Assets**: Provided additional visual context through uploaded files.
-- **Media Assets**: Integrated core assets for the Antigravity ecosystem.
-- **Media Assets**: Finalized the initial asset upload for the project skeleton.
-- **Bootstrap**: Initial establishment of the Master Antigravity Integration Playbook (April 2026 Edition).
-- **Core Repository**: Initialized the project with the foundational repository structure.
-
-## [0.2.0] - 2026-04-19
+## [1.1.0] - 2026-04-20
 
 ### Added
-- **Full Workflow Registry**: Registered all remaining L1 Orchestrators in `AGENTS.md` (including `full-stack-feature`, `db-migration-safe`, `context-compact`, `monthly-maintenance`, and `pr-review`).
-- **Safety Rule Registration**: Formally added the `_master` universal persona and guardrail rule to the `AGENTS.md` routing index.
+- **Agent Self-Improvement Meta Layer**: A new skill (`agent-self-improvement-meta`) that implements an autonomous evolution loop using the Mastra framework. It supports closed-loop `Audit -> Propose -> Verify -> PR` cycles to maintain repository integrity.
+- **Turborepo Monorepo Migration**: The project has been restructured into a high-velocity monorepo with `apps/` and `packages/` directories, managed by Turborepo for optimized build and task orchestration.
+- **Documentation Rot Auditor**: Implemented a core health engine (`documentation-rot-guard`) in the `@repo/rag-utils` package that detects semantic drift and broken links across the skill library.
+- **@repo/rag-utils**: A shared package for RAG indexing, semantic scoring, and structured repository auditing.
 
-### Changed
-- **Architectural Modernization**: Migrated the core configuration directory from legacy `.agent/` to the modern `.agents/` (plural) standard to support multi-agent orchestration.
-- **Global Path Update**: Updated all internal path references and external documentation (README, AGENTS.md, workflows) to reflect the new `.agents/` convention.
-- **GStack Integration Phase 2**: Deployed the **Taste Engine** (personalization) and **Anti-Slop Guard** (aesthetic QA) as opt-in advanced intelligence layers.
-- **Final Documentation**: Refreshed the root `README.md` to reflect the complete GStack-powered BASE stack.
-
-## [0.1.1] - 2026-04-19
-
-### Added
-- **Persistent Planning Stack (v1.1)**: Integrated the April 2026 Bridge Builder planning methodology.
-- **L3 Planning Engine**: Established `.agents/skills/planning/SKILL.md` for KV-cache optimized state persistence and attempt-1 error logging.
-- **L1 Orchestration**: Created `plan-complex-task` and `plan-status` workflows for persistent multi-session task management.
-- **Security Protocols**: Implemented `planning-guard.md` to prevent non-deterministic execution of multi-phase tasks.
-- **Session Templates**: Created a schema-frozen `session-state.tpl.md` reference for durable memory.
+### Improved
+- **Structured Audit Reporting**: Enhanced the `docs-rot-audit` task to support the `--json` flag for machine-readable telemetry consumed by the meta-evolution layer.
+- **Global Skill Registry**: Updated `AGENTS.md` and `GEMINI.md` to integrate the and latest delivery, observability, and self-evolution expertise.
+- **README Overhaul**: Completely updated the main documentation to reflect the new monorepo architecture and self-maintenance features.
 
 ### Fixed
-- **Documentation Overhaul**: Comprehensive refresh of the `README.md` with official Antigravity and DeepMind technology links, badge integration, and project structure documentation.
-
-## [0.1.0] - 2026-04-18
-
-### Added
-- **Initial Bootstrap**: Primary establishment of the Master Antigravity Integration Playbook.
-- **Core Skills Library**: Initial rollout of expert skills including `db-migration`, `tdd-enforcer`, `security-audit`, `frontend-verify`, `refactor-legacy`, and `context-compact`.
-- **Baseline Guardrails**: Rollout of the 5-layer safety stack and initial routing index.
-- **Project Skeleton**: Created the recommended foundational folder structure for the Antigravity ecosystem.
+- **Skill Documentation Rot**: Fixed 7 broken file paths in `shadcn/SKILL.md`.
+- **Prisma Docs Integrity**: Fixed 9+ stale URLs in `prisma-expert/SKILL.md` to match the current Prisma ORM documentation structure.
+- **Visual Audit False Positives**: Escaped example URLs in `design-review/SKILL.md` to prevent auditor misidentification.
 
 ---
-_Generated for the April 2026 Playbook • Modernization Phase Complete_
+_Generated by Antigravity Changelog Generator_

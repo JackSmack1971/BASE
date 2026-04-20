@@ -15,6 +15,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "simple-git": "^3.36.0",
     "turbo": "^2.0.0"
   }
 }

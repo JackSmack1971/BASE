@@ -21,8 +21,9 @@
 - **GStack-powered Continuous Checkpoints** (mandatory trajectory persistence)
 - **10x Product Strategy** (structured opportunity discovery & prioritization)
 - **Adversarial Content Factory** (4-skill article production pipeline: Dialectic Research + Red Team review)
-- **Closed-Loop Documentation Health** (RAG-based drift detection + link integrity audits)
-- **Agent-Native CI/CD Orchestration** (Automated matrix workflows + OpenTelemetry metrics)
+- **Closed-Loop Documentation Health**: RAG-based drift detection + link integrity audits.
+- **Agent Self-Improvement Meta Layer**: Autonomous self-evolution loop (Audit → Propose → Verify → PR) using Mastra.
+- **Agent-Native CI/CD Orchestration**: Automated matrix workflows + OpenTelemetry metrics.
 - **UI/UX Pro Max** (161 color palettes, 99 UX guidelines, and 10 tech stacks)
 - **Taste Engine** + **Anti-Slop Guard** (opt-in advanced personalization & quality)
 
@@ -128,6 +129,7 @@ BASE/
 
 ## 🔥 Key Skills & Workflows
 
+- **agent-self-improvement-meta** → Autonomous self-healing PR loop using Mastra
 - **documentation-rot-guard** → Semantic drift & link integrity enforcement
 - **ci-cd-orchestrator** → Agent-native matrixed delivery pipeline
 - **opentelemetry-expert** → Tracing + metrics + self-diagnostic spans
@@ -138,7 +140,7 @@ BASE/
 - **taste-engine** → Personalized design intelligence
 - **anti-slop-guard** → Aesthetic quality enforcement
 - **playwright-visual-regression** → Next.js visual QA & self-healing E2E
-- **db-migration, tdd-enforcer, security-audit, frontend-verify**, etc.
+- **db-migration**, **tdd-enforcer**, **security-audit**, **frontend-verify**, etc.
 
 ---
 

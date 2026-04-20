@@ -70,6 +70,10 @@
   Detects documentation rot using semantic drift (pgvector + ast-grep) and generates draft fixes for TypeScript/Next.js/Turborepo codebases. Proactive CI gate with bidirectional sync. 
   Triggers: "check documentation rot", "audit docs", "fix doc drift", "run docs consistency check", "self-documenting codebase", "detect stale docs".
 
+- **agent-self-improvement-meta** (`.agents/skills/agent-self-improvement-meta/`): 
+  Autonomous self-healing and evolution layer for the agent framework. Orchestrates Audit → Propose → Verify → PR loops using Mastra. 
+  Triggers: "run self-improvement", "evolve skills", "meta-evolve", "improve agent OS", "self-healing meta loop".
+
 
 ## Knowledge Items
 
